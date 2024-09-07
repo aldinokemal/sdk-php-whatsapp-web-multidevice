@@ -1,4 +1,4 @@
-# OpenAPI\Client\UserApi
+# SdkWhatsappWebMultiDevice\UserApi
 
 All URIs are relative to http://localhost:3000, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 ## `userAvatar()`
 
 ```php
-userAvatar($phone, $is_preview): \OpenAPI\Client\Model\UserAvatarResponse
+userAvatar($phone, $is_preview): \SdkWhatsappWebMultiDevice\Model\UserAvatarResponse
 ```
 
 User Avatar
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -51,7 +51,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserAvatarResponse**](../Model/UserAvatarResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\UserAvatarResponse**](../Model/UserAvatarResponse.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `userInfo()`
 
 ```php
-userInfo($phone): \OpenAPI\Client\Model\UserInfoResponse
+userInfo($phone): \SdkWhatsappWebMultiDevice\Model\UserInfoResponse
 ```
 
 User Info
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserInfoResponse**](../Model/UserInfoResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\UserInfoResponse**](../Model/UserInfoResponse.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -173,7 +173,7 @@ No authorization required
 ## `userMyPrivacy()`
 
 ```php
-userMyPrivacy(): \OpenAPI\Client\Model\UserPrivacyResponse
+userMyPrivacy(): \SdkWhatsappWebMultiDevice\Model\UserPrivacyResponse
 ```
 
 User My Privacy Setting
@@ -186,7 +186,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserPrivacyResponse**](../Model/UserPrivacyResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\UserPrivacyResponse**](../Model/UserPrivacyResponse.md)
 
 ### Authorization
 

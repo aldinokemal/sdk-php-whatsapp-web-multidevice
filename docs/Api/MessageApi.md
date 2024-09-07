@@ -1,4 +1,4 @@
-# OpenAPI\Client\MessageApi
+# SdkWhatsappWebMultiDevice\MessageApi
 
 All URIs are relative to http://localhost:3000, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 ## `deleteMessage()`
 
 ```php
-deleteMessage($message_id, $revoke_message_request): \OpenAPI\Client\Model\SendResponse
+deleteMessage($message_id, $revoke_message_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Delete Message
@@ -26,13 +26,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\MessageApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\MessageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $message_id = 'message_id_example'; // string | Message ID
-$revoke_message_request = new \OpenAPI\Client\Model\RevokeMessageRequest(); // \OpenAPI\Client\Model\RevokeMessageRequest
+$revoke_message_request = new \SdkWhatsappWebMultiDevice\Model\RevokeMessageRequest(); // \SdkWhatsappWebMultiDevice\Model\RevokeMessageRequest
 
 try {
     $result = $apiInstance->deleteMessage($message_id, $revoke_message_request);
@@ -47,11 +47,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **message_id** | **string**| Message ID | |
-| **revoke_message_request** | [**\OpenAPI\Client\Model\RevokeMessageRequest**](../Model/RevokeMessageRequest.md)|  | [optional] |
+| **revoke_message_request** | [**\SdkWhatsappWebMultiDevice\Model\RevokeMessageRequest**](../Model/RevokeMessageRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `reactMessage()`
 
 ```php
-reactMessage($message_id, $react_message_request): \OpenAPI\Client\Model\SendResponse
+reactMessage($message_id, $react_message_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send reaction to message
@@ -82,13 +82,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\MessageApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\MessageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $message_id = 'message_id_example'; // string | Message ID
-$react_message_request = new \OpenAPI\Client\Model\ReactMessageRequest(); // \OpenAPI\Client\Model\ReactMessageRequest
+$react_message_request = new \SdkWhatsappWebMultiDevice\Model\ReactMessageRequest(); // \SdkWhatsappWebMultiDevice\Model\ReactMessageRequest
 
 try {
     $result = $apiInstance->reactMessage($message_id, $react_message_request);
@@ -103,11 +103,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **message_id** | **string**| Message ID | |
-| **react_message_request** | [**\OpenAPI\Client\Model\ReactMessageRequest**](../Model/ReactMessageRequest.md)|  | [optional] |
+| **react_message_request** | [**\SdkWhatsappWebMultiDevice\Model\ReactMessageRequest**](../Model/ReactMessageRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ No authorization required
 ## `revokeMessage()`
 
 ```php
-revokeMessage($message_id, $revoke_message_request): \OpenAPI\Client\Model\SendResponse
+revokeMessage($message_id, $revoke_message_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Revoke Message
@@ -138,13 +138,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\MessageApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\MessageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $message_id = 'message_id_example'; // string | Message ID
-$revoke_message_request = new \OpenAPI\Client\Model\RevokeMessageRequest(); // \OpenAPI\Client\Model\RevokeMessageRequest
+$revoke_message_request = new \SdkWhatsappWebMultiDevice\Model\RevokeMessageRequest(); // \SdkWhatsappWebMultiDevice\Model\RevokeMessageRequest
 
 try {
     $result = $apiInstance->revokeMessage($message_id, $revoke_message_request);
@@ -159,11 +159,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **message_id** | **string**| Message ID | |
-| **revoke_message_request** | [**\OpenAPI\Client\Model\RevokeMessageRequest**](../Model/RevokeMessageRequest.md)|  | [optional] |
+| **revoke_message_request** | [**\SdkWhatsappWebMultiDevice\Model\RevokeMessageRequest**](../Model/RevokeMessageRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ No authorization required
 ## `updateMessage()`
 
 ```php
-updateMessage($message_id, $update_message_request): \OpenAPI\Client\Model\SendResponse
+updateMessage($message_id, $update_message_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Edit message by message ID before 15 minutes
@@ -194,13 +194,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\MessageApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\MessageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $message_id = 'message_id_example'; // string | Message ID
-$update_message_request = new \OpenAPI\Client\Model\UpdateMessageRequest(); // \OpenAPI\Client\Model\UpdateMessageRequest
+$update_message_request = new \SdkWhatsappWebMultiDevice\Model\UpdateMessageRequest(); // \SdkWhatsappWebMultiDevice\Model\UpdateMessageRequest
 
 try {
     $result = $apiInstance->updateMessage($message_id, $update_message_request);
@@ -215,11 +215,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **message_id** | **string**| Message ID | |
-| **update_message_request** | [**\OpenAPI\Client\Model\UpdateMessageRequest**](../Model/UpdateMessageRequest.md)|  | [optional] |
+| **update_message_request** | [**\SdkWhatsappWebMultiDevice\Model\UpdateMessageRequest**](../Model/UpdateMessageRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 

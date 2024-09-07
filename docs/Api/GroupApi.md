@@ -1,4 +1,4 @@
-# OpenAPI\Client\GroupApi
+# SdkWhatsappWebMultiDevice\GroupApi
 
 All URIs are relative to http://localhost:3000, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 ## `addParticipantToGroup()`
 
 ```php
-addParticipantToGroup($manage_participant_request): \OpenAPI\Client\Model\ManageParticipantResponse
+addParticipantToGroup($manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
 ```
 
 Adding more participants to group
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$manage_participant_request = new \OpenAPI\Client\Model\ManageParticipantRequest(); // \OpenAPI\Client\Model\ManageParticipantRequest
+$manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
 try {
     $result = $apiInstance->addParticipantToGroup($manage_participant_request);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **manage_participant_request** | [**\OpenAPI\Client\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
+| **manage_participant_request** | [**\SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ManageParticipantResponse**](../Model/ManageParticipantResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse**](../Model/ManageParticipantResponse.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `createGroup()`
 
 ```php
-createGroup($create_group_request): \OpenAPI\Client\Model\CreateGroupResponse
+createGroup($create_group_request): \SdkWhatsappWebMultiDevice\Model\CreateGroupResponse
 ```
 
 Create group and add participant
@@ -83,12 +83,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_group_request = new \OpenAPI\Client\Model\CreateGroupRequest(); // \OpenAPI\Client\Model\CreateGroupRequest
+$create_group_request = new \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest(); // \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest
 
 try {
     $result = $apiInstance->createGroup($create_group_request);
@@ -102,11 +102,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_group_request** | [**\OpenAPI\Client\Model\CreateGroupRequest**](../Model/CreateGroupRequest.md)|  | [optional] |
+| **create_group_request** | [**\SdkWhatsappWebMultiDevice\Model\CreateGroupRequest**](../Model/CreateGroupRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateGroupResponse**](../Model/CreateGroupResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\CreateGroupResponse**](../Model/CreateGroupResponse.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `demoteParticipantToMember()`
 
 ```php
-demoteParticipantToMember($manage_participant_request): \OpenAPI\Client\Model\ManageParticipantResponse
+demoteParticipantToMember($manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
 ```
 
 Demote participants to member
@@ -137,12 +137,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$manage_participant_request = new \OpenAPI\Client\Model\ManageParticipantRequest(); // \OpenAPI\Client\Model\ManageParticipantRequest
+$manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
 try {
     $result = $apiInstance->demoteParticipantToMember($manage_participant_request);
@@ -156,11 +156,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **manage_participant_request** | [**\OpenAPI\Client\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
+| **manage_participant_request** | [**\SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ManageParticipantResponse**](../Model/ManageParticipantResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse**](../Model/ManageParticipantResponse.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ No authorization required
 ## `joinGroupWithLink()`
 
 ```php
-joinGroupWithLink($join_group_with_link_request): \OpenAPI\Client\Model\GenericResponse
+joinGroupWithLink($join_group_with_link_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Join group with link
@@ -191,12 +191,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$join_group_with_link_request = new \OpenAPI\Client\Model\JoinGroupWithLinkRequest(); // \OpenAPI\Client\Model\JoinGroupWithLinkRequest
+$join_group_with_link_request = new \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest(); // \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest
 
 try {
     $result = $apiInstance->joinGroupWithLink($join_group_with_link_request);
@@ -210,11 +210,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **join_group_with_link_request** | [**\OpenAPI\Client\Model\JoinGroupWithLinkRequest**](../Model/JoinGroupWithLinkRequest.md)|  | [optional] |
+| **join_group_with_link_request** | [**\SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest**](../Model/JoinGroupWithLinkRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericResponse**](../Model/GenericResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\GenericResponse**](../Model/GenericResponse.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ No authorization required
 ## `leaveGroup()`
 
 ```php
-leaveGroup($leave_group_request): \OpenAPI\Client\Model\GenericResponse
+leaveGroup($leave_group_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Leave group
@@ -245,12 +245,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$leave_group_request = new \OpenAPI\Client\Model\LeaveGroupRequest(); // \OpenAPI\Client\Model\LeaveGroupRequest
+$leave_group_request = new \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest(); // \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest
 
 try {
     $result = $apiInstance->leaveGroup($leave_group_request);
@@ -264,11 +264,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **leave_group_request** | [**\OpenAPI\Client\Model\LeaveGroupRequest**](../Model/LeaveGroupRequest.md)|  | [optional] |
+| **leave_group_request** | [**\SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest**](../Model/LeaveGroupRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericResponse**](../Model/GenericResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\GenericResponse**](../Model/GenericResponse.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ No authorization required
 ## `promoteParticipantToAdmin()`
 
 ```php
-promoteParticipantToAdmin($manage_participant_request): \OpenAPI\Client\Model\ManageParticipantResponse
+promoteParticipantToAdmin($manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
 ```
 
 Promote participants to admin
@@ -299,12 +299,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$manage_participant_request = new \OpenAPI\Client\Model\ManageParticipantRequest(); // \OpenAPI\Client\Model\ManageParticipantRequest
+$manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
 try {
     $result = $apiInstance->promoteParticipantToAdmin($manage_participant_request);
@@ -318,11 +318,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **manage_participant_request** | [**\OpenAPI\Client\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
+| **manage_participant_request** | [**\SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ManageParticipantResponse**](../Model/ManageParticipantResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse**](../Model/ManageParticipantResponse.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ No authorization required
 ## `removeParticipantFromGroup()`
 
 ```php
-removeParticipantFromGroup($manage_participant_request): \OpenAPI\Client\Model\ManageParticipantResponse
+removeParticipantFromGroup($manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
 ```
 
 Remove participants from group
@@ -353,12 +353,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$manage_participant_request = new \OpenAPI\Client\Model\ManageParticipantRequest(); // \OpenAPI\Client\Model\ManageParticipantRequest
+$manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
 try {
     $result = $apiInstance->removeParticipantFromGroup($manage_participant_request);
@@ -372,11 +372,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **manage_participant_request** | [**\OpenAPI\Client\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
+| **manage_participant_request** | [**\SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ManageParticipantResponse**](../Model/ManageParticipantResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse**](../Model/ManageParticipantResponse.md)
 
 ### Authorization
 

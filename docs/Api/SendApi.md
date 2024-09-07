@@ -1,4 +1,4 @@
-# OpenAPI\Client\SendApi
+# SdkWhatsappWebMultiDevice\SendApi
 
 All URIs are relative to http://localhost:3000, except if the operation defines another base path.
 
@@ -18,7 +18,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 ## `sendAudio()`
 
 ```php
-sendAudio($phone, $audio): \OpenAPI\Client\Model\SendResponse
+sendAudio($phone, $audio): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Audio
@@ -31,7 +31,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -56,7 +56,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ No authorization required
 ## `sendContact()`
 
 ```php
-sendContact($send_contact_request): \OpenAPI\Client\Model\SendResponse
+sendContact($send_contact_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Contact
@@ -87,12 +87,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$send_contact_request = new \OpenAPI\Client\Model\SendContactRequest(); // \OpenAPI\Client\Model\SendContactRequest
+$send_contact_request = new \SdkWhatsappWebMultiDevice\Model\SendContactRequest(); // \SdkWhatsappWebMultiDevice\Model\SendContactRequest
 
 try {
     $result = $apiInstance->sendContact($send_contact_request);
@@ -106,11 +106,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_contact_request** | [**\OpenAPI\Client\Model\SendContactRequest**](../Model/SendContactRequest.md)|  | [optional] |
+| **send_contact_request** | [**\SdkWhatsappWebMultiDevice\Model\SendContactRequest**](../Model/SendContactRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ No authorization required
 ## `sendFile()`
 
 ```php
-sendFile($phone, $caption, $file): \OpenAPI\Client\Model\SendResponse
+sendFile($phone, $caption, $file): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send File
@@ -141,7 +141,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -168,7 +168,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ No authorization required
 ## `sendImage()`
 
 ```php
-sendImage($phone, $caption, $view_once, $image, $compress): \OpenAPI\Client\Model\SendResponse
+sendImage($phone, $caption, $view_once, $image, $compress): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Image
@@ -199,7 +199,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -230,7 +230,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -248,7 +248,7 @@ No authorization required
 ## `sendLink()`
 
 ```php
-sendLink($send_link_request): \OpenAPI\Client\Model\SendResponse
+sendLink($send_link_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Link
@@ -261,12 +261,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$send_link_request = new \OpenAPI\Client\Model\SendLinkRequest(); // \OpenAPI\Client\Model\SendLinkRequest
+$send_link_request = new \SdkWhatsappWebMultiDevice\Model\SendLinkRequest(); // \SdkWhatsappWebMultiDevice\Model\SendLinkRequest
 
 try {
     $result = $apiInstance->sendLink($send_link_request);
@@ -280,11 +280,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_link_request** | [**\OpenAPI\Client\Model\SendLinkRequest**](../Model/SendLinkRequest.md)|  | [optional] |
+| **send_link_request** | [**\SdkWhatsappWebMultiDevice\Model\SendLinkRequest**](../Model/SendLinkRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ No authorization required
 ## `sendLocation()`
 
 ```php
-sendLocation($send_location_request): \OpenAPI\Client\Model\SendResponse
+sendLocation($send_location_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Location
@@ -315,12 +315,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$send_location_request = new \OpenAPI\Client\Model\SendLocationRequest(); // \OpenAPI\Client\Model\SendLocationRequest
+$send_location_request = new \SdkWhatsappWebMultiDevice\Model\SendLocationRequest(); // \SdkWhatsappWebMultiDevice\Model\SendLocationRequest
 
 try {
     $result = $apiInstance->sendLocation($send_location_request);
@@ -334,11 +334,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_location_request** | [**\OpenAPI\Client\Model\SendLocationRequest**](../Model/SendLocationRequest.md)|  | [optional] |
+| **send_location_request** | [**\SdkWhatsappWebMultiDevice\Model\SendLocationRequest**](../Model/SendLocationRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -356,7 +356,7 @@ No authorization required
 ## `sendMessage()`
 
 ```php
-sendMessage($send_message_request): \OpenAPI\Client\Model\SendResponse
+sendMessage($send_message_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Message
@@ -369,12 +369,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$send_message_request = new \OpenAPI\Client\Model\SendMessageRequest(); // \OpenAPI\Client\Model\SendMessageRequest
+$send_message_request = new \SdkWhatsappWebMultiDevice\Model\SendMessageRequest(); // \SdkWhatsappWebMultiDevice\Model\SendMessageRequest
 
 try {
     $result = $apiInstance->sendMessage($send_message_request);
@@ -388,11 +388,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_message_request** | [**\OpenAPI\Client\Model\SendMessageRequest**](../Model/SendMessageRequest.md)|  | [optional] |
+| **send_message_request** | [**\SdkWhatsappWebMultiDevice\Model\SendMessageRequest**](../Model/SendMessageRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -410,7 +410,7 @@ No authorization required
 ## `sendPoll()`
 
 ```php
-sendPoll($send_poll_request): \OpenAPI\Client\Model\SendResponse
+sendPoll($send_poll_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Poll / Vote
@@ -423,12 +423,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$send_poll_request = new \OpenAPI\Client\Model\SendPollRequest(); // \OpenAPI\Client\Model\SendPollRequest
+$send_poll_request = new \SdkWhatsappWebMultiDevice\Model\SendPollRequest(); // \SdkWhatsappWebMultiDevice\Model\SendPollRequest
 
 try {
     $result = $apiInstance->sendPoll($send_poll_request);
@@ -442,11 +442,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_poll_request** | [**\OpenAPI\Client\Model\SendPollRequest**](../Model/SendPollRequest.md)|  | |
+| **send_poll_request** | [**\SdkWhatsappWebMultiDevice\Model\SendPollRequest**](../Model/SendPollRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 
@@ -464,7 +464,7 @@ No authorization required
 ## `sendVideo()`
 
 ```php
-sendVideo($phone, $caption, $view_once, $video, $compress): \OpenAPI\Client\Model\SendResponse
+sendVideo($phone, $caption, $view_once, $video, $compress): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Video
@@ -477,7 +477,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\SendApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -508,7 +508,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SendResponse**](../Model/SendResponse.md)
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
 
 ### Authorization
 

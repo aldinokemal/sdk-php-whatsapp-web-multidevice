@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SdkWhatsappWebMultiDevice\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SdkWhatsappWebMultiDevice\ObjectSerializer;
 
 /**
  * UserInfoResponseResults Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class UserInfoResponseResults implements ModelInterface, ArrayAccess, \JsonSeria
         'verified_name' => 'string',
         'status' => 'string',
         'picture_id' => 'string',
-        'devices' => '\OpenAPI\Client\Model\UserInfoResponseResultsDevicesInner[]'
+        'devices' => '\SdkWhatsappWebMultiDevice\Model\UserInfoResponseResultsDevicesInner[]'
     ];
 
     /**
@@ -394,7 +394,7 @@ class UserInfoResponseResults implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets devices
      *
-     * @return \OpenAPI\Client\Model\UserInfoResponseResultsDevicesInner[]|null
+     * @return \SdkWhatsappWebMultiDevice\Model\UserInfoResponseResultsDevicesInner[]|null
      */
     public function getDevices()
     {
@@ -404,7 +404,7 @@ class UserInfoResponseResults implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets devices
      *
-     * @param \OpenAPI\Client\Model\UserInfoResponseResultsDevicesInner[]|null $devices devices
+     * @param \SdkWhatsappWebMultiDevice\Model\UserInfoResponseResultsDevicesInner[]|null $devices devices
      *
      * @return self
      */

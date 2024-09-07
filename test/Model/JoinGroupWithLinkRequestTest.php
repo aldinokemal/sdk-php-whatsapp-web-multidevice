@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client\Test\Model;
+namespace SdkWhatsappWebMultiDevice\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description JoinGroupWithLinkRequest
- * @package     OpenAPI\Client
+ * @package     SdkWhatsappWebMultiDevice
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

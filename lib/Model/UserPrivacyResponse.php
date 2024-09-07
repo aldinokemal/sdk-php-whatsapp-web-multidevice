@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SdkWhatsappWebMultiDevice\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SdkWhatsappWebMultiDevice\ObjectSerializer;
 
 /**
  * UserPrivacyResponse Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class UserPrivacyResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'code' => 'string',
         'message' => 'string',
-        'results' => '\OpenAPI\Client\Model\UserPrivacyResponseResults'
+        'results' => '\SdkWhatsappWebMultiDevice\Model\UserPrivacyResponseResults'
     ];
 
     /**
@@ -360,7 +360,7 @@ class UserPrivacyResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\UserPrivacyResponseResults|null
+     * @return \SdkWhatsappWebMultiDevice\Model\UserPrivacyResponseResults|null
      */
     public function getResults()
     {
@@ -370,7 +370,7 @@ class UserPrivacyResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\UserPrivacyResponseResults|null $results results
+     * @param \SdkWhatsappWebMultiDevice\Model\UserPrivacyResponseResults|null $results results
      *
      * @return self
      */

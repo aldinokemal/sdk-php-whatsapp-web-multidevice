@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace SdkWhatsappWebMultiDevice\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use SdkWhatsappWebMultiDevice\ApiException;
+use SdkWhatsappWebMultiDevice\Configuration;
+use SdkWhatsappWebMultiDevice\HeaderSelector;
+use SdkWhatsappWebMultiDevice\ObjectSerializer;
 
 /**
  * GroupApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -145,12 +145,12 @@ class GroupApi
      *
      * Adding more participants to group
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addParticipantToGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ManageParticipantResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function addParticipantToGroup($manage_participant_request = null, string $contentType = self::contentTypes['addParticipantToGroup'][0])
     {
@@ -163,12 +163,12 @@ class GroupApi
      *
      * Adding more participants to group
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addParticipantToGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ManageParticipantResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function addParticipantToGroupWithHttpInfo($manage_participant_request = null, string $contentType = self::contentTypes['addParticipantToGroup'][0])
     {
@@ -211,11 +211,11 @@ class GroupApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ManageParticipantResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ManageParticipantResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -233,16 +233,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ManageParticipantResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -260,16 +260,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -287,13 +287,13 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ManageParticipantResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -326,7 +326,7 @@ class GroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ManageParticipantResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -334,7 +334,7 @@ class GroupApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -342,7 +342,7 @@ class GroupApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -357,7 +357,7 @@ class GroupApi
      *
      * Adding more participants to group
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addParticipantToGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -378,7 +378,7 @@ class GroupApi
      *
      * Adding more participants to group
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addParticipantToGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -386,7 +386,7 @@ class GroupApi
      */
     public function addParticipantToGroupAsyncWithHttpInfo($manage_participant_request = null, string $contentType = self::contentTypes['addParticipantToGroup'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ManageParticipantResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse';
         $request = $this->addParticipantToGroupRequest($manage_participant_request, $contentType);
 
         return $this->client
@@ -428,7 +428,7 @@ class GroupApi
     /**
      * Create request for operation 'addParticipantToGroup'
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addParticipantToGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -515,12 +515,12 @@ class GroupApi
      *
      * Create group and add participant
      *
-     * @param  \OpenAPI\Client\Model\CreateGroupRequest $create_group_request create_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest $create_group_request create_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateGroupResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\CreateGroupResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function createGroup($create_group_request = null, string $contentType = self::contentTypes['createGroup'][0])
     {
@@ -533,12 +533,12 @@ class GroupApi
      *
      * Create group and add participant
      *
-     * @param  \OpenAPI\Client\Model\CreateGroupRequest $create_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest $create_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateGroupResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\CreateGroupResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function createGroupWithHttpInfo($create_group_request = null, string $contentType = self::contentTypes['createGroup'][0])
     {
@@ -581,11 +581,11 @@ class GroupApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CreateGroupResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\CreateGroupResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CreateGroupResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\CreateGroupResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -603,16 +603,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreateGroupResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\CreateGroupResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -630,16 +630,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -657,13 +657,13 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CreateGroupResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\CreateGroupResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -696,7 +696,7 @@ class GroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateGroupResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\CreateGroupResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -704,7 +704,7 @@ class GroupApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -712,7 +712,7 @@ class GroupApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -727,7 +727,7 @@ class GroupApi
      *
      * Create group and add participant
      *
-     * @param  \OpenAPI\Client\Model\CreateGroupRequest $create_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest $create_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -748,7 +748,7 @@ class GroupApi
      *
      * Create group and add participant
      *
-     * @param  \OpenAPI\Client\Model\CreateGroupRequest $create_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest $create_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -756,7 +756,7 @@ class GroupApi
      */
     public function createGroupAsyncWithHttpInfo($create_group_request = null, string $contentType = self::contentTypes['createGroup'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreateGroupResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\CreateGroupResponse';
         $request = $this->createGroupRequest($create_group_request, $contentType);
 
         return $this->client
@@ -798,7 +798,7 @@ class GroupApi
     /**
      * Create request for operation 'createGroup'
      *
-     * @param  \OpenAPI\Client\Model\CreateGroupRequest $create_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest $create_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -885,12 +885,12 @@ class GroupApi
      *
      * Demote participants to member
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['demoteParticipantToMember'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ManageParticipantResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function demoteParticipantToMember($manage_participant_request = null, string $contentType = self::contentTypes['demoteParticipantToMember'][0])
     {
@@ -903,12 +903,12 @@ class GroupApi
      *
      * Demote participants to member
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['demoteParticipantToMember'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ManageParticipantResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function demoteParticipantToMemberWithHttpInfo($manage_participant_request = null, string $contentType = self::contentTypes['demoteParticipantToMember'][0])
     {
@@ -951,11 +951,11 @@ class GroupApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ManageParticipantResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ManageParticipantResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -973,16 +973,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ManageParticipantResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1000,16 +1000,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1027,13 +1027,13 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ManageParticipantResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1066,7 +1066,7 @@ class GroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ManageParticipantResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1074,7 +1074,7 @@ class GroupApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1082,7 +1082,7 @@ class GroupApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1097,7 +1097,7 @@ class GroupApi
      *
      * Demote participants to member
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['demoteParticipantToMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1118,7 +1118,7 @@ class GroupApi
      *
      * Demote participants to member
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['demoteParticipantToMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1126,7 +1126,7 @@ class GroupApi
      */
     public function demoteParticipantToMemberAsyncWithHttpInfo($manage_participant_request = null, string $contentType = self::contentTypes['demoteParticipantToMember'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ManageParticipantResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse';
         $request = $this->demoteParticipantToMemberRequest($manage_participant_request, $contentType);
 
         return $this->client
@@ -1168,7 +1168,7 @@ class GroupApi
     /**
      * Create request for operation 'demoteParticipantToMember'
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['demoteParticipantToMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1255,12 +1255,12 @@ class GroupApi
      *
      * Join group with link
      *
-     * @param  \OpenAPI\Client\Model\JoinGroupWithLinkRequest $join_group_with_link_request join_group_with_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest $join_group_with_link_request join_group_with_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['joinGroupWithLink'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GenericResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\GenericResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function joinGroupWithLink($join_group_with_link_request = null, string $contentType = self::contentTypes['joinGroupWithLink'][0])
     {
@@ -1273,12 +1273,12 @@ class GroupApi
      *
      * Join group with link
      *
-     * @param  \OpenAPI\Client\Model\JoinGroupWithLinkRequest $join_group_with_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest $join_group_with_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['joinGroupWithLink'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GenericResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\GenericResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function joinGroupWithLinkWithHttpInfo($join_group_with_link_request = null, string $contentType = self::contentTypes['joinGroupWithLink'][0])
     {
@@ -1321,11 +1321,11 @@ class GroupApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GenericResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\GenericResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GenericResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\GenericResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1343,16 +1343,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GenericResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\GenericResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1370,16 +1370,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1397,13 +1397,13 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GenericResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\GenericResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1436,7 +1436,7 @@ class GroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GenericResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\GenericResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1444,7 +1444,7 @@ class GroupApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1452,7 +1452,7 @@ class GroupApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1467,7 +1467,7 @@ class GroupApi
      *
      * Join group with link
      *
-     * @param  \OpenAPI\Client\Model\JoinGroupWithLinkRequest $join_group_with_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest $join_group_with_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['joinGroupWithLink'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1488,7 +1488,7 @@ class GroupApi
      *
      * Join group with link
      *
-     * @param  \OpenAPI\Client\Model\JoinGroupWithLinkRequest $join_group_with_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest $join_group_with_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['joinGroupWithLink'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1496,7 +1496,7 @@ class GroupApi
      */
     public function joinGroupWithLinkAsyncWithHttpInfo($join_group_with_link_request = null, string $contentType = self::contentTypes['joinGroupWithLink'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GenericResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\GenericResponse';
         $request = $this->joinGroupWithLinkRequest($join_group_with_link_request, $contentType);
 
         return $this->client
@@ -1538,7 +1538,7 @@ class GroupApi
     /**
      * Create request for operation 'joinGroupWithLink'
      *
-     * @param  \OpenAPI\Client\Model\JoinGroupWithLinkRequest $join_group_with_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest $join_group_with_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['joinGroupWithLink'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1625,12 +1625,12 @@ class GroupApi
      *
      * Leave group
      *
-     * @param  \OpenAPI\Client\Model\LeaveGroupRequest $leave_group_request leave_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest $leave_group_request leave_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['leaveGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GenericResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\GenericResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function leaveGroup($leave_group_request = null, string $contentType = self::contentTypes['leaveGroup'][0])
     {
@@ -1643,12 +1643,12 @@ class GroupApi
      *
      * Leave group
      *
-     * @param  \OpenAPI\Client\Model\LeaveGroupRequest $leave_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest $leave_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['leaveGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GenericResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\GenericResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function leaveGroupWithHttpInfo($leave_group_request = null, string $contentType = self::contentTypes['leaveGroup'][0])
     {
@@ -1691,11 +1691,11 @@ class GroupApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GenericResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\GenericResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GenericResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\GenericResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1713,16 +1713,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GenericResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\GenericResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1740,16 +1740,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1767,13 +1767,13 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GenericResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\GenericResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1806,7 +1806,7 @@ class GroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GenericResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\GenericResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1814,7 +1814,7 @@ class GroupApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1822,7 +1822,7 @@ class GroupApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1837,7 +1837,7 @@ class GroupApi
      *
      * Leave group
      *
-     * @param  \OpenAPI\Client\Model\LeaveGroupRequest $leave_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest $leave_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['leaveGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1858,7 +1858,7 @@ class GroupApi
      *
      * Leave group
      *
-     * @param  \OpenAPI\Client\Model\LeaveGroupRequest $leave_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest $leave_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['leaveGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1866,7 +1866,7 @@ class GroupApi
      */
     public function leaveGroupAsyncWithHttpInfo($leave_group_request = null, string $contentType = self::contentTypes['leaveGroup'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GenericResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\GenericResponse';
         $request = $this->leaveGroupRequest($leave_group_request, $contentType);
 
         return $this->client
@@ -1908,7 +1908,7 @@ class GroupApi
     /**
      * Create request for operation 'leaveGroup'
      *
-     * @param  \OpenAPI\Client\Model\LeaveGroupRequest $leave_group_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest $leave_group_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['leaveGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1995,12 +1995,12 @@ class GroupApi
      *
      * Promote participants to admin
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['promoteParticipantToAdmin'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ManageParticipantResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function promoteParticipantToAdmin($manage_participant_request = null, string $contentType = self::contentTypes['promoteParticipantToAdmin'][0])
     {
@@ -2013,12 +2013,12 @@ class GroupApi
      *
      * Promote participants to admin
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['promoteParticipantToAdmin'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ManageParticipantResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function promoteParticipantToAdminWithHttpInfo($manage_participant_request = null, string $contentType = self::contentTypes['promoteParticipantToAdmin'][0])
     {
@@ -2061,11 +2061,11 @@ class GroupApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ManageParticipantResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ManageParticipantResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2083,16 +2083,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ManageParticipantResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2110,16 +2110,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2137,13 +2137,13 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ManageParticipantResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2176,7 +2176,7 @@ class GroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ManageParticipantResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2184,7 +2184,7 @@ class GroupApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2192,7 +2192,7 @@ class GroupApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2207,7 +2207,7 @@ class GroupApi
      *
      * Promote participants to admin
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['promoteParticipantToAdmin'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2228,7 +2228,7 @@ class GroupApi
      *
      * Promote participants to admin
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['promoteParticipantToAdmin'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2236,7 +2236,7 @@ class GroupApi
      */
     public function promoteParticipantToAdminAsyncWithHttpInfo($manage_participant_request = null, string $contentType = self::contentTypes['promoteParticipantToAdmin'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ManageParticipantResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse';
         $request = $this->promoteParticipantToAdminRequest($manage_participant_request, $contentType);
 
         return $this->client
@@ -2278,7 +2278,7 @@ class GroupApi
     /**
      * Create request for operation 'promoteParticipantToAdmin'
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['promoteParticipantToAdmin'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2365,12 +2365,12 @@ class GroupApi
      *
      * Remove participants from group
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeParticipantFromGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ManageParticipantResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function removeParticipantFromGroup($manage_participant_request = null, string $contentType = self::contentTypes['removeParticipantFromGroup'][0])
     {
@@ -2383,12 +2383,12 @@ class GroupApi
      *
      * Remove participants from group
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeParticipantFromGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ManageParticipantResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function removeParticipantFromGroupWithHttpInfo($manage_participant_request = null, string $contentType = self::contentTypes['removeParticipantFromGroup'][0])
     {
@@ -2431,11 +2431,11 @@ class GroupApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ManageParticipantResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ManageParticipantResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2453,16 +2453,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ManageParticipantResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2480,16 +2480,16 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2507,13 +2507,13 @@ class GroupApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ManageParticipantResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2546,7 +2546,7 @@ class GroupApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ManageParticipantResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2554,7 +2554,7 @@ class GroupApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2562,7 +2562,7 @@ class GroupApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2577,7 +2577,7 @@ class GroupApi
      *
      * Remove participants from group
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeParticipantFromGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2598,7 +2598,7 @@ class GroupApi
      *
      * Remove participants from group
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeParticipantFromGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2606,7 +2606,7 @@ class GroupApi
      */
     public function removeParticipantFromGroupAsyncWithHttpInfo($manage_participant_request = null, string $contentType = self::contentTypes['removeParticipantFromGroup'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ManageParticipantResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse';
         $request = $this->removeParticipantFromGroupRequest($manage_participant_request, $contentType);
 
         return $this->client
@@ -2648,7 +2648,7 @@ class GroupApi
     /**
      * Create request for operation 'removeParticipantFromGroup'
      *
-     * @param  \OpenAPI\Client\Model\ManageParticipantRequest $manage_participant_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest $manage_participant_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeParticipantFromGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

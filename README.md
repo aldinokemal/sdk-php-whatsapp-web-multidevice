@@ -1,4 +1,4 @@
-# sdk_go_whatsapp_web_multidevice
+# SdkWhatsappWebMultiDevice
 
 This API is used for sending whatsapp via API
 
@@ -36,7 +36,7 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/sdk_go_whatsapp_web_multidevice/vendor/autoload.php');
+require_once('/path/to/SdkWhatsappWebMultiDevice/vendor/autoload.php');
 ```
 
 ## Getting Started
@@ -50,7 +50,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AppApi(
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\AppApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

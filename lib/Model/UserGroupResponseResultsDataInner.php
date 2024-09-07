@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace SdkWhatsappWebMultiDevice\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \SdkWhatsappWebMultiDevice\ObjectSerializer;
 
 /**
  * UserGroupResponseResultsDataInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class UserGroupResponseResultsDataInner implements ModelInterface, ArrayAccess, 
         'name_set_by' => 'string',
         'group_created' => 'string',
         'participant_version_id' => 'string',
-        'participants' => '\OpenAPI\Client\Model\UserGroupResponseResultsDataInnerParticipantsInner[]'
+        'participants' => '\SdkWhatsappWebMultiDevice\Model\UserGroupResponseResultsDataInnerParticipantsInner[]'
     ];
 
     /**
@@ -530,7 +530,7 @@ class UserGroupResponseResultsDataInner implements ModelInterface, ArrayAccess, 
     /**
      * Gets participants
      *
-     * @return \OpenAPI\Client\Model\UserGroupResponseResultsDataInnerParticipantsInner[]|null
+     * @return \SdkWhatsappWebMultiDevice\Model\UserGroupResponseResultsDataInnerParticipantsInner[]|null
      */
     public function getParticipants()
     {
@@ -540,7 +540,7 @@ class UserGroupResponseResultsDataInner implements ModelInterface, ArrayAccess, 
     /**
      * Sets participants
      *
-     * @param \OpenAPI\Client\Model\UserGroupResponseResultsDataInnerParticipantsInner[]|null $participants participants
+     * @param \SdkWhatsappWebMultiDevice\Model\UserGroupResponseResultsDataInnerParticipantsInner[]|null $participants participants
      *
      * @return self
      */

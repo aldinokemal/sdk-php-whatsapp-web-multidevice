@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace SdkWhatsappWebMultiDevice\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use SdkWhatsappWebMultiDevice\ApiException;
+use SdkWhatsappWebMultiDevice\Configuration;
+use SdkWhatsappWebMultiDevice\HeaderSelector;
+use SdkWhatsappWebMultiDevice\ObjectSerializer;
 
 /**
  * SendApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  SdkWhatsappWebMultiDevice
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -155,9 +155,9 @@ class SendApi
      * @param  \SplFileObject $audio Audio to send (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendAudio'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function sendAudio($phone = null, $audio = null, string $contentType = self::contentTypes['sendAudio'][0])
     {
@@ -174,9 +174,9 @@ class SendApi
      * @param  \SplFileObject $audio Audio to send (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendAudio'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendAudioWithHttpInfo($phone = null, $audio = null, string $contentType = self::contentTypes['sendAudio'][0])
     {
@@ -219,11 +219,11 @@ class SendApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SendResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SendResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -241,16 +241,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SendResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\SendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -268,16 +268,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -295,13 +295,13 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SendResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -334,7 +334,7 @@ class SendApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\SendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -342,7 +342,7 @@ class SendApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -350,7 +350,7 @@ class SendApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -396,7 +396,7 @@ class SendApi
      */
     public function sendAudioAsyncWithHttpInfo($phone = null, $audio = null, string $contentType = self::contentTypes['sendAudio'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
         $request = $this->sendAudioRequest($phone, $audio, $contentType);
 
         return $this->client
@@ -536,12 +536,12 @@ class SendApi
      *
      * Send Contact
      *
-     * @param  \OpenAPI\Client\Model\SendContactRequest $send_contact_request send_contact_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendContactRequest $send_contact_request send_contact_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function sendContact($send_contact_request = null, string $contentType = self::contentTypes['sendContact'][0])
     {
@@ -554,12 +554,12 @@ class SendApi
      *
      * Send Contact
      *
-     * @param  \OpenAPI\Client\Model\SendContactRequest $send_contact_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendContactRequest $send_contact_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendContactWithHttpInfo($send_contact_request = null, string $contentType = self::contentTypes['sendContact'][0])
     {
@@ -602,11 +602,11 @@ class SendApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SendResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SendResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -624,16 +624,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SendResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\SendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -651,16 +651,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -678,13 +678,13 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SendResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -717,7 +717,7 @@ class SendApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\SendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -725,7 +725,7 @@ class SendApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -733,7 +733,7 @@ class SendApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -748,7 +748,7 @@ class SendApi
      *
      * Send Contact
      *
-     * @param  \OpenAPI\Client\Model\SendContactRequest $send_contact_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendContactRequest $send_contact_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -769,7 +769,7 @@ class SendApi
      *
      * Send Contact
      *
-     * @param  \OpenAPI\Client\Model\SendContactRequest $send_contact_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendContactRequest $send_contact_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -777,7 +777,7 @@ class SendApi
      */
     public function sendContactAsyncWithHttpInfo($send_contact_request = null, string $contentType = self::contentTypes['sendContact'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
         $request = $this->sendContactRequest($send_contact_request, $contentType);
 
         return $this->client
@@ -819,7 +819,7 @@ class SendApi
     /**
      * Create request for operation 'sendContact'
      *
-     * @param  \OpenAPI\Client\Model\SendContactRequest $send_contact_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendContactRequest $send_contact_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -911,9 +911,9 @@ class SendApi
      * @param  \SplFileObject $file File to send (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendFile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function sendFile($phone = null, $caption = null, $file = null, string $contentType = self::contentTypes['sendFile'][0])
     {
@@ -931,9 +931,9 @@ class SendApi
      * @param  \SplFileObject $file File to send (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendFile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendFileWithHttpInfo($phone = null, $caption = null, $file = null, string $contentType = self::contentTypes['sendFile'][0])
     {
@@ -976,11 +976,11 @@ class SendApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SendResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SendResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -998,16 +998,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SendResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\SendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1025,16 +1025,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1052,13 +1052,13 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SendResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1091,7 +1091,7 @@ class SendApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\SendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1099,7 +1099,7 @@ class SendApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1107,7 +1107,7 @@ class SendApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1155,7 +1155,7 @@ class SendApi
      */
     public function sendFileAsyncWithHttpInfo($phone = null, $caption = null, $file = null, string $contentType = self::contentTypes['sendFile'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
         $request = $this->sendFileRequest($phone, $caption, $file, $contentType);
 
         return $this->client
@@ -1308,9 +1308,9 @@ class SendApi
      * @param  bool $compress Compress image (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendImage'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function sendImage($phone = null, $caption = null, $view_once = null, $image = null, $compress = null, string $contentType = self::contentTypes['sendImage'][0])
     {
@@ -1330,9 +1330,9 @@ class SendApi
      * @param  bool $compress Compress image (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendImage'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendImageWithHttpInfo($phone = null, $caption = null, $view_once = null, $image = null, $compress = null, string $contentType = self::contentTypes['sendImage'][0])
     {
@@ -1375,11 +1375,11 @@ class SendApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SendResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SendResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1397,16 +1397,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SendResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\SendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1424,16 +1424,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1451,13 +1451,13 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SendResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1490,7 +1490,7 @@ class SendApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\SendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1498,7 +1498,7 @@ class SendApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1506,7 +1506,7 @@ class SendApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1558,7 +1558,7 @@ class SendApi
      */
     public function sendImageAsyncWithHttpInfo($phone = null, $caption = null, $view_once = null, $image = null, $compress = null, string $contentType = self::contentTypes['sendImage'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
         $request = $this->sendImageRequest($phone, $caption, $view_once, $image, $compress, $contentType);
 
         return $this->client
@@ -1716,12 +1716,12 @@ class SendApi
      *
      * Send Link
      *
-     * @param  \OpenAPI\Client\Model\SendLinkRequest $send_link_request send_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLinkRequest $send_link_request send_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLink'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function sendLink($send_link_request = null, string $contentType = self::contentTypes['sendLink'][0])
     {
@@ -1734,12 +1734,12 @@ class SendApi
      *
      * Send Link
      *
-     * @param  \OpenAPI\Client\Model\SendLinkRequest $send_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLinkRequest $send_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLink'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendLinkWithHttpInfo($send_link_request = null, string $contentType = self::contentTypes['sendLink'][0])
     {
@@ -1782,11 +1782,11 @@ class SendApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SendResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SendResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1804,16 +1804,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SendResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\SendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1831,16 +1831,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1858,13 +1858,13 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SendResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1897,7 +1897,7 @@ class SendApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\SendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1905,7 +1905,7 @@ class SendApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1913,7 +1913,7 @@ class SendApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1928,7 +1928,7 @@ class SendApi
      *
      * Send Link
      *
-     * @param  \OpenAPI\Client\Model\SendLinkRequest $send_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLinkRequest $send_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLink'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1949,7 +1949,7 @@ class SendApi
      *
      * Send Link
      *
-     * @param  \OpenAPI\Client\Model\SendLinkRequest $send_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLinkRequest $send_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLink'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1957,7 +1957,7 @@ class SendApi
      */
     public function sendLinkAsyncWithHttpInfo($send_link_request = null, string $contentType = self::contentTypes['sendLink'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
         $request = $this->sendLinkRequest($send_link_request, $contentType);
 
         return $this->client
@@ -1999,7 +1999,7 @@ class SendApi
     /**
      * Create request for operation 'sendLink'
      *
-     * @param  \OpenAPI\Client\Model\SendLinkRequest $send_link_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLinkRequest $send_link_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLink'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2086,12 +2086,12 @@ class SendApi
      *
      * Send Location
      *
-     * @param  \OpenAPI\Client\Model\SendLocationRequest $send_location_request send_location_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLocationRequest $send_location_request send_location_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLocation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function sendLocation($send_location_request = null, string $contentType = self::contentTypes['sendLocation'][0])
     {
@@ -2104,12 +2104,12 @@ class SendApi
      *
      * Send Location
      *
-     * @param  \OpenAPI\Client\Model\SendLocationRequest $send_location_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLocationRequest $send_location_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLocation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendLocationWithHttpInfo($send_location_request = null, string $contentType = self::contentTypes['sendLocation'][0])
     {
@@ -2152,11 +2152,11 @@ class SendApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SendResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SendResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2174,16 +2174,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SendResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\SendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2201,16 +2201,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2228,13 +2228,13 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SendResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2267,7 +2267,7 @@ class SendApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\SendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2275,7 +2275,7 @@ class SendApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2283,7 +2283,7 @@ class SendApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2298,7 +2298,7 @@ class SendApi
      *
      * Send Location
      *
-     * @param  \OpenAPI\Client\Model\SendLocationRequest $send_location_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLocationRequest $send_location_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLocation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2319,7 +2319,7 @@ class SendApi
      *
      * Send Location
      *
-     * @param  \OpenAPI\Client\Model\SendLocationRequest $send_location_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLocationRequest $send_location_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLocation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2327,7 +2327,7 @@ class SendApi
      */
     public function sendLocationAsyncWithHttpInfo($send_location_request = null, string $contentType = self::contentTypes['sendLocation'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
         $request = $this->sendLocationRequest($send_location_request, $contentType);
 
         return $this->client
@@ -2369,7 +2369,7 @@ class SendApi
     /**
      * Create request for operation 'sendLocation'
      *
-     * @param  \OpenAPI\Client\Model\SendLocationRequest $send_location_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendLocationRequest $send_location_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendLocation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2456,12 +2456,12 @@ class SendApi
      *
      * Send Message
      *
-     * @param  \OpenAPI\Client\Model\SendMessageRequest $send_message_request send_message_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendMessageRequest $send_message_request send_message_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendMessage'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function sendMessage($send_message_request = null, string $contentType = self::contentTypes['sendMessage'][0])
     {
@@ -2474,12 +2474,12 @@ class SendApi
      *
      * Send Message
      *
-     * @param  \OpenAPI\Client\Model\SendMessageRequest $send_message_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendMessageRequest $send_message_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendMessage'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendMessageWithHttpInfo($send_message_request = null, string $contentType = self::contentTypes['sendMessage'][0])
     {
@@ -2522,11 +2522,11 @@ class SendApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SendResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SendResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2544,16 +2544,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SendResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\SendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2571,16 +2571,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2598,13 +2598,13 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SendResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2637,7 +2637,7 @@ class SendApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\SendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2645,7 +2645,7 @@ class SendApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2653,7 +2653,7 @@ class SendApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2668,7 +2668,7 @@ class SendApi
      *
      * Send Message
      *
-     * @param  \OpenAPI\Client\Model\SendMessageRequest $send_message_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendMessageRequest $send_message_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendMessage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2689,7 +2689,7 @@ class SendApi
      *
      * Send Message
      *
-     * @param  \OpenAPI\Client\Model\SendMessageRequest $send_message_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendMessageRequest $send_message_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendMessage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2697,7 +2697,7 @@ class SendApi
      */
     public function sendMessageAsyncWithHttpInfo($send_message_request = null, string $contentType = self::contentTypes['sendMessage'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
         $request = $this->sendMessageRequest($send_message_request, $contentType);
 
         return $this->client
@@ -2739,7 +2739,7 @@ class SendApi
     /**
      * Create request for operation 'sendMessage'
      *
-     * @param  \OpenAPI\Client\Model\SendMessageRequest $send_message_request (optional)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendMessageRequest $send_message_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendMessage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2826,12 +2826,12 @@ class SendApi
      *
      * Send Poll / Vote
      *
-     * @param  \OpenAPI\Client\Model\SendPollRequest $send_poll_request send_poll_request (required)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendPollRequest $send_poll_request send_poll_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPoll'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function sendPoll($send_poll_request, string $contentType = self::contentTypes['sendPoll'][0])
     {
@@ -2844,12 +2844,12 @@ class SendApi
      *
      * Send Poll / Vote
      *
-     * @param  \OpenAPI\Client\Model\SendPollRequest $send_poll_request (required)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendPollRequest $send_poll_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPoll'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendPollWithHttpInfo($send_poll_request, string $contentType = self::contentTypes['sendPoll'][0])
     {
@@ -2892,11 +2892,11 @@ class SendApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SendResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SendResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2914,16 +2914,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SendResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\SendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2941,16 +2941,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2968,13 +2968,13 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SendResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3007,7 +3007,7 @@ class SendApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\SendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3015,7 +3015,7 @@ class SendApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3023,7 +3023,7 @@ class SendApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3038,7 +3038,7 @@ class SendApi
      *
      * Send Poll / Vote
      *
-     * @param  \OpenAPI\Client\Model\SendPollRequest $send_poll_request (required)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendPollRequest $send_poll_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPoll'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3059,7 +3059,7 @@ class SendApi
      *
      * Send Poll / Vote
      *
-     * @param  \OpenAPI\Client\Model\SendPollRequest $send_poll_request (required)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendPollRequest $send_poll_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPoll'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3067,7 +3067,7 @@ class SendApi
      */
     public function sendPollAsyncWithHttpInfo($send_poll_request, string $contentType = self::contentTypes['sendPoll'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
         $request = $this->sendPollRequest($send_poll_request, $contentType);
 
         return $this->client
@@ -3109,7 +3109,7 @@ class SendApi
     /**
      * Create request for operation 'sendPoll'
      *
-     * @param  \OpenAPI\Client\Model\SendPollRequest $send_poll_request (required)
+     * @param  \SdkWhatsappWebMultiDevice\Model\SendPollRequest $send_poll_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendPoll'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3209,9 +3209,9 @@ class SendApi
      * @param  bool $compress Compress video (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendVideo'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer
+     * @return \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer
      */
     public function sendVideo($phone = null, $caption = null, $view_once = null, $video = null, $compress = null, string $contentType = self::contentTypes['sendVideo'][0])
     {
@@ -3231,9 +3231,9 @@ class SendApi
      * @param  bool $compress Compress video (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendVideo'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \SdkWhatsappWebMultiDevice\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SendResponse|\OpenAPI\Client\Model\ErrorBadRequest|\OpenAPI\Client\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SdkWhatsappWebMultiDevice\Model\SendResponse|\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest|\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendVideoWithHttpInfo($phone = null, $caption = null, $view_once = null, $video = null, $compress = null, string $contentType = self::contentTypes['sendVideo'][0])
     {
@@ -3276,11 +3276,11 @@ class SendApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SendResponse' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SendResponse' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\SendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3298,16 +3298,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SendResponse', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\SendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorBadRequest' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorBadRequest' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3325,16 +3325,16 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorBadRequest', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorInternalServer' === '\SplFileObject') {
+                    if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorInternalServer' !== 'string') {
+                        if ('\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3352,13 +3352,13 @@ class SendApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorInternalServer', []),
+                        ObjectSerializer::deserialize($content, '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SendResponse';
+            $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3391,7 +3391,7 @@ class SendApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SendResponse',
+                        '\SdkWhatsappWebMultiDevice\Model\SendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3399,7 +3399,7 @@ class SendApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorBadRequest',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorBadRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3407,7 +3407,7 @@ class SendApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorInternalServer',
+                        '\SdkWhatsappWebMultiDevice\Model\ErrorInternalServer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3459,7 +3459,7 @@ class SendApi
      */
     public function sendVideoAsyncWithHttpInfo($phone = null, $caption = null, $view_once = null, $video = null, $compress = null, string $contentType = self::contentTypes['sendVideo'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SendResponse';
+        $returnType = '\SdkWhatsappWebMultiDevice\Model\SendResponse';
         $request = $this->sendVideoRequest($phone, $caption, $view_once, $video, $compress, $contentType);
 
         return $this->client
