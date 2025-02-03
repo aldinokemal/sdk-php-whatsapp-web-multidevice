@@ -85,8 +85,10 @@ Class | Method | HTTP request | Description
 *GroupApi* | [**removeParticipantFromGroup**](docs/Api/GroupApi.md#removeparticipantfromgroup) | **POST** /group/participants/remove | Remove participants from group
 *MessageApi* | [**deleteMessage**](docs/Api/MessageApi.md#deletemessage) | **POST** /message/{message_id}/delete | Delete Message
 *MessageApi* | [**reactMessage**](docs/Api/MessageApi.md#reactmessage) | **POST** /message/{message_id}/reaction | Send reaction to message
+*MessageApi* | [**readMessage**](docs/Api/MessageApi.md#readmessage) | **POST** /message/{message_id}/read | Mark as read message
 *MessageApi* | [**revokeMessage**](docs/Api/MessageApi.md#revokemessage) | **POST** /message/{message_id}/revoke | Revoke Message
 *MessageApi* | [**updateMessage**](docs/Api/MessageApi.md#updatemessage) | **POST** /message/{message_id}/update | Edit message by message ID before 15 minutes
+*NewsletterApi* | [**unfollowNewsletter**](docs/Api/NewsletterApi.md#unfollownewsletter) | **POST** /newsletter/unfollow | Unfollow newsletter
 *SendApi* | [**sendAudio**](docs/Api/SendApi.md#sendaudio) | **POST** /send/audio | Send Audio
 *SendApi* | [**sendContact**](docs/Api/SendApi.md#sendcontact) | **POST** /send/contact | Send Contact
 *SendApi* | [**sendFile**](docs/Api/SendApi.md#sendfile) | **POST** /send/file | Send File
@@ -95,10 +97,13 @@ Class | Method | HTTP request | Description
 *SendApi* | [**sendLocation**](docs/Api/SendApi.md#sendlocation) | **POST** /send/location | Send Location
 *SendApi* | [**sendMessage**](docs/Api/SendApi.md#sendmessage) | **POST** /send/message | Send Message
 *SendApi* | [**sendPoll**](docs/Api/SendApi.md#sendpoll) | **POST** /send/poll | Send Poll / Vote
+*SendApi* | [**sendPresence**](docs/Api/SendApi.md#sendpresence) | **POST** /send/presence | Send presence status
 *SendApi* | [**sendVideo**](docs/Api/SendApi.md#sendvideo) | **POST** /send/video | Send Video
 *UserApi* | [**userAvatar**](docs/Api/UserApi.md#useravatar) | **GET** /user/avatar | User Avatar
+*UserApi* | [**userChangeAvatar**](docs/Api/UserApi.md#userchangeavatar) | **POST** /user/avatar | User Change Avatar
 *UserApi* | [**userInfo**](docs/Api/UserApi.md#userinfo) | **GET** /user/info | User Info
 *UserApi* | [**userMyGroups**](docs/Api/UserApi.md#usermygroups) | **GET** /user/my/groups | User My List Groups
+*UserApi* | [**userMyNewsletter**](docs/Api/UserApi.md#usermynewsletter) | **GET** /user/my/newsletters | User My List Groups
 *UserApi* | [**userMyPrivacy**](docs/Api/UserApi.md#usermyprivacy) | **GET** /user/my/privacy | User My Privacy Setting
 
 ## Models
@@ -111,6 +116,9 @@ Class | Method | HTTP request | Description
 - [ErrorBadRequest](docs/Model/ErrorBadRequest.md)
 - [ErrorInternalServer](docs/Model/ErrorInternalServer.md)
 - [GenericResponse](docs/Model/GenericResponse.md)
+- [Group](docs/Model/Group.md)
+- [GroupResponse](docs/Model/GroupResponse.md)
+- [GroupResponseResults](docs/Model/GroupResponseResults.md)
 - [JoinGroupWithLinkRequest](docs/Model/JoinGroupWithLinkRequest.md)
 - [LeaveGroupRequest](docs/Model/LeaveGroupRequest.md)
 - [LoginResponse](docs/Model/LoginResponse.md)
@@ -120,15 +128,31 @@ Class | Method | HTTP request | Description
 - [ManageParticipantRequest](docs/Model/ManageParticipantRequest.md)
 - [ManageParticipantResponse](docs/Model/ManageParticipantResponse.md)
 - [ManageParticipantResponseResultsInner](docs/Model/ManageParticipantResponseResultsInner.md)
+- [Newsletter](docs/Model/Newsletter.md)
+- [NewsletterResponse](docs/Model/NewsletterResponse.md)
+- [NewsletterResponseResults](docs/Model/NewsletterResponseResults.md)
+- [NewsletterState](docs/Model/NewsletterState.md)
+- [NewsletterThreadMetadata](docs/Model/NewsletterThreadMetadata.md)
+- [NewsletterThreadMetadataDescription](docs/Model/NewsletterThreadMetadataDescription.md)
+- [NewsletterThreadMetadataName](docs/Model/NewsletterThreadMetadataName.md)
+- [NewsletterThreadMetadataPicture](docs/Model/NewsletterThreadMetadataPicture.md)
+- [NewsletterThreadMetadataPreview](docs/Model/NewsletterThreadMetadataPreview.md)
+- [NewsletterThreadMetadataSettings](docs/Model/NewsletterThreadMetadataSettings.md)
+- [NewsletterThreadMetadataSettingsReactionCodes](docs/Model/NewsletterThreadMetadataSettingsReactionCodes.md)
+- [NewsletterViewerMetadata](docs/Model/NewsletterViewerMetadata.md)
+- [Participant](docs/Model/Participant.md)
 - [ReactMessageRequest](docs/Model/ReactMessageRequest.md)
+- [ReadMessageRequest](docs/Model/ReadMessageRequest.md)
 - [RevokeMessageRequest](docs/Model/RevokeMessageRequest.md)
 - [SendContactRequest](docs/Model/SendContactRequest.md)
 - [SendLinkRequest](docs/Model/SendLinkRequest.md)
 - [SendLocationRequest](docs/Model/SendLocationRequest.md)
 - [SendMessageRequest](docs/Model/SendMessageRequest.md)
 - [SendPollRequest](docs/Model/SendPollRequest.md)
+- [SendPresenceRequest](docs/Model/SendPresenceRequest.md)
 - [SendResponse](docs/Model/SendResponse.md)
 - [SendResponseResults](docs/Model/SendResponseResults.md)
+- [UnfollowNewsletterRequest](docs/Model/UnfollowNewsletterRequest.md)
 - [UpdateMessageRequest](docs/Model/UpdateMessageRequest.md)
 - [UserAvatarResponse](docs/Model/UserAvatarResponse.md)
 - [UserAvatarResponseResults](docs/Model/UserAvatarResponseResults.md)
@@ -162,6 +186,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `4.2.0`
-    - Generator version: `7.9.0-SNAPSHOT`
+- API version: `5.0.0`
+    - Generator version: `7.12.0-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

@@ -5,8 +5,10 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**userAvatar()**](UserApi.md#userAvatar) | **GET** /user/avatar | User Avatar |
+| [**userChangeAvatar()**](UserApi.md#userChangeAvatar) | **POST** /user/avatar | User Change Avatar |
 | [**userInfo()**](UserApi.md#userInfo) | **GET** /user/info | User Info |
 | [**userMyGroups()**](UserApi.md#userMyGroups) | **GET** /user/my/groups | User My List Groups |
+| [**userMyNewsletter()**](UserApi.md#userMyNewsletter) | **GET** /user/my/newsletters | User My List Groups |
 | [**userMyPrivacy()**](UserApi.md#userMyPrivacy) | **GET** /user/my/privacy | User My Privacy Setting |
 
 
@@ -60,6 +62,60 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `userChangeAvatar()`
+
+```php
+userChangeAvatar($avatar): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+```
+
+User Change Avatar
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$avatar = '/path/to/file.txt'; // \SplFileObject | Avatar to send
+
+try {
+    $result = $apiInstance->userChangeAvatar($avatar);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->userChangeAvatar: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **avatar** | **\SplFileObject****\SplFileObject**| Avatar to send | [optional] |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\GenericResponse**](../Model/GenericResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `multipart/form-data`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -123,7 +179,7 @@ No authorization required
 ## `userMyGroups()`
 
 ```php
-userMyGroups()
+userMyGroups(): \SdkWhatsappWebMultiDevice\Model\UserGroupResponse
 ```
 
 User My List Groups
@@ -143,7 +199,8 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
 );
 
 try {
-    $apiInstance->userMyGroups();
+    $result = $apiInstance->userMyGroups();
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userMyGroups: ', $e->getMessage(), PHP_EOL;
 }
@@ -155,7 +212,58 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**\SdkWhatsappWebMultiDevice\Model\UserGroupResponse**](../Model/UserGroupResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `userMyNewsletter()`
+
+```php
+userMyNewsletter(): \SdkWhatsappWebMultiDevice\Model\NewsletterResponse
+```
+
+User My List Groups
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->userMyNewsletter();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->userMyNewsletter: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\NewsletterResponse**](../Model/NewsletterResponse.md)
 
 ### Authorization
 
