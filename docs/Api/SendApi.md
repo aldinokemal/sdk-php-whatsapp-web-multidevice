@@ -187,7 +187,7 @@ No authorization required
 ## `sendImage()`
 
 ```php
-sendImage($phone, $caption, $view_once, $image, $compress): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendImage($phone, $caption, $view_once, $image, $image_url, $compress): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Image
@@ -209,10 +209,11 @@ $phone = 'phone_example'; // string | Phone number with country code
 $caption = 'caption_example'; // string | Caption to send
 $view_once = True; // bool | View once
 $image = '/path/to/file.txt'; // \SplFileObject | Image to send
+$image_url = 'image_url_example'; // string | Image URL to send
 $compress = True; // bool | Compress image
 
 try {
-    $result = $apiInstance->sendImage($phone, $caption, $view_once, $image, $compress);
+    $result = $apiInstance->sendImage($phone, $caption, $view_once, $image, $image_url, $compress);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendImage: ', $e->getMessage(), PHP_EOL;
@@ -227,6 +228,7 @@ try {
 | **caption** | **string**| Caption to send | [optional] |
 | **view_once** | **bool**| View once | [optional] |
 | **image** | **\SplFileObject****\SplFileObject**| Image to send | [optional] |
+| **image_url** | **string**| Image URL to send | [optional] |
 | **compress** | **bool**| Compress image | [optional] |
 
 ### Return type

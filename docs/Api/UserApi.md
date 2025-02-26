@@ -7,6 +7,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 | [**userAvatar()**](UserApi.md#userAvatar) | **GET** /user/avatar | User Avatar |
 | [**userChangeAvatar()**](UserApi.md#userChangeAvatar) | **POST** /user/avatar | User Change Avatar |
 | [**userInfo()**](UserApi.md#userInfo) | **GET** /user/info | User Info |
+| [**userMyContacts()**](UserApi.md#userMyContacts) | **GET** /user/my/contacts | Get list of user contacts |
 | [**userMyGroups()**](UserApi.md#userMyGroups) | **GET** /user/my/groups | User My List Groups |
 | [**userMyNewsletter()**](UserApi.md#userMyNewsletter) | **GET** /user/my/newsletters | User My List Groups |
 | [**userMyPrivacy()**](UserApi.md#userMyPrivacy) | **GET** /user/my/privacy | User My Privacy Setting |
@@ -33,8 +34,8 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$phone = 6289685028129@s.whatsapp.net; // int
-$is_preview = true; // bool
+$phone = 6289685028129@s.whatsapp.net; // string | Phone number with country code
+$is_preview = true; // bool | Whether to fetch a preview of the avatar
 
 try {
     $result = $apiInstance->userAvatar($phone, $is_preview);
@@ -48,8 +49,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **phone** | **int**|  | [optional] |
-| **is_preview** | **bool**|  | [optional] |
+| **phone** | **string**| Phone number with country code | [optional] |
+| **is_preview** | **bool**| Whether to fetch a preview of the avatar | [optional] |
 
 ### Return type
 
@@ -143,7 +144,7 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$phone = 6289685028129@s.whatsapp.net; // int
+$phone = 6289685028129@s.whatsapp.net; // string | Phone number with country code
 
 try {
     $result = $apiInstance->userInfo($phone);
@@ -157,11 +158,62 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **phone** | **int**|  | [optional] |
+| **phone** | **string**| Phone number with country code | [optional] |
 
 ### Return type
 
 [**\SdkWhatsappWebMultiDevice\Model\UserInfoResponse**](../Model/UserInfoResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `userMyContacts()`
+
+```php
+userMyContacts(): \SdkWhatsappWebMultiDevice\Model\MyListContactsResponse
+```
+
+Get list of user contacts
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->userMyContacts();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->userMyContacts: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\MyListContactsResponse**](../Model/MyListContactsResponse.md)
 
 ### Authorization
 
