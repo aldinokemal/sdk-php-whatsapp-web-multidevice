@@ -5,11 +5,14 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**addParticipantToGroup()**](GroupApi.md#addParticipantToGroup) | **POST** /group/participants | Adding more participants to group |
+| [**approveGroupParticipantRequest()**](GroupApi.md#approveGroupParticipantRequest) | **POST** /group/participant-requests/approve | Approve participant request to join group |
 | [**createGroup()**](GroupApi.md#createGroup) | **POST** /group | Create group and add participant |
 | [**demoteParticipantToMember()**](GroupApi.md#demoteParticipantToMember) | **POST** /group/participants/demote | Demote participants to member |
+| [**getGroupParticipantRequests()**](GroupApi.md#getGroupParticipantRequests) | **GET** /group/participant-requests | Get list of participant requests to join group |
 | [**joinGroupWithLink()**](GroupApi.md#joinGroupWithLink) | **POST** /group/join-with-link | Join group with link |
 | [**leaveGroup()**](GroupApi.md#leaveGroup) | **POST** /group/leave | Leave group |
 | [**promoteParticipantToAdmin()**](GroupApi.md#promoteParticipantToAdmin) | **POST** /group/participants/promote | Promote participants to admin |
+| [**rejectGroupParticipantRequest()**](GroupApi.md#rejectGroupParticipantRequest) | **POST** /group/participant-requests/reject | Reject participant request to join group |
 | [**removeParticipantFromGroup()**](GroupApi.md#removeParticipantFromGroup) | **POST** /group/participants/remove | Remove participants from group |
 
 
@@ -28,11 +31,17 @@ Adding more participants to group
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
@@ -56,7 +65,67 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `approveGroupParticipantRequest()`
+
+```php
+approveGroupParticipantRequest($approve_group_participant_request_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+```
+
+Approve participant request to join group
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$approve_group_participant_request_request = new \SdkWhatsappWebMultiDevice\Model\ApproveGroupParticipantRequestRequest(); // \SdkWhatsappWebMultiDevice\Model\ApproveGroupParticipantRequestRequest
+
+try {
+    $result = $apiInstance->approveGroupParticipantRequest($approve_group_participant_request_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupApi->approveGroupParticipantRequest: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **approve_group_participant_request_request** | [**\SdkWhatsappWebMultiDevice\Model\ApproveGroupParticipantRequestRequest**](../Model/ApproveGroupParticipantRequestRequest.md)|  | [optional] |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\GenericResponse**](../Model/GenericResponse.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -82,11 +151,17 @@ Create group and add participant
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $create_group_request = new \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest(); // \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest
 
@@ -110,7 +185,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -136,11 +211,17 @@ Demote participants to member
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
@@ -164,11 +245,71 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getGroupParticipantRequests()`
+
+```php
+getGroupParticipantRequests($group_id): \SdkWhatsappWebMultiDevice\Model\GroupParticipantRequestListResponse
+```
+
+Get list of participant requests to join group
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$group_id = 120363024512399999@g.us; // string | The group ID to get participant requests for
+
+try {
+    $result = $apiInstance->getGroupParticipantRequests($group_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupApi->getGroupParticipantRequests: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **group_id** | **string**| The group ID to get participant requests for | |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\GroupParticipantRequestListResponse**](../Model/GroupParticipantRequestListResponse.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -190,11 +331,17 @@ Join group with link
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $join_group_with_link_request = new \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest(); // \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest
 
@@ -218,7 +365,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -244,11 +391,17 @@ Leave group
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $leave_group_request = new \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest(); // \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest
 
@@ -272,7 +425,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -298,11 +451,17 @@ Promote participants to admin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
@@ -326,7 +485,67 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `rejectGroupParticipantRequest()`
+
+```php
+rejectGroupParticipantRequest($reject_group_participant_request_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+```
+
+Reject participant request to join group
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$reject_group_participant_request_request = new \SdkWhatsappWebMultiDevice\Model\RejectGroupParticipantRequestRequest(); // \SdkWhatsappWebMultiDevice\Model\RejectGroupParticipantRequestRequest
+
+try {
+    $result = $apiInstance->rejectGroupParticipantRequest($reject_group_participant_request_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupApi->rejectGroupParticipantRequest: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **reject_group_participant_request_request** | [**\SdkWhatsappWebMultiDevice\Model\RejectGroupParticipantRequestRequest**](../Model/RejectGroupParticipantRequestRequest.md)|  | [optional] |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\GenericResponse**](../Model/GenericResponse.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -352,11 +571,17 @@ Remove participants from group
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
@@ -380,7 +605,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 

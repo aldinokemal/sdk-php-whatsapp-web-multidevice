@@ -22,11 +22,17 @@ Unfollow newsletter
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\NewsletterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $unfollow_newsletter_request = new \SdkWhatsappWebMultiDevice\Model\UnfollowNewsletterRequest(); // \SdkWhatsappWebMultiDevice\Model\UnfollowNewsletterRequest
 
@@ -50,7 +56,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 

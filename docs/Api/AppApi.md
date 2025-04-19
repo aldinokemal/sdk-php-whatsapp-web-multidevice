@@ -26,11 +26,17 @@ Get list connected devices
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\AppApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -51,7 +57,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -77,11 +83,17 @@ Login to whatsapp server
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\AppApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -102,7 +114,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -128,11 +140,17 @@ Login with pairing code
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\AppApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $phone = 628912344551; // string | Your phone number
 
@@ -156,7 +174,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -182,11 +200,17 @@ Remove database and logout
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\AppApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -207,7 +231,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -233,11 +257,17 @@ Reconnecting to whatsapp server
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\AppApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -258,7 +288,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 

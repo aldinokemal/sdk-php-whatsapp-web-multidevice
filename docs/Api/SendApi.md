@@ -31,11 +31,17 @@ Send Audio
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $phone = 'phone_example'; // string | Phone number with country code
 $audio = '/path/to/file.txt'; // \SplFileObject | Audio to send
@@ -61,7 +67,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -87,11 +93,17 @@ Send Contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $send_contact_request = new \SdkWhatsappWebMultiDevice\Model\SendContactRequest(); // \SdkWhatsappWebMultiDevice\Model\SendContactRequest
 
@@ -115,7 +127,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -141,11 +153,17 @@ Send File
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $phone = 'phone_example'; // string | Phone number with country code
 $caption = 'caption_example'; // string | Caption to send
@@ -173,7 +191,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -199,11 +217,17 @@ Send Image
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $phone = 'phone_example'; // string | Phone number with country code
 $caption = 'caption_example'; // string | Caption to send
@@ -237,7 +261,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -263,11 +287,17 @@ Send Link
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $send_link_request = new \SdkWhatsappWebMultiDevice\Model\SendLinkRequest(); // \SdkWhatsappWebMultiDevice\Model\SendLinkRequest
 
@@ -291,7 +321,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -317,11 +347,17 @@ Send Location
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $send_location_request = new \SdkWhatsappWebMultiDevice\Model\SendLocationRequest(); // \SdkWhatsappWebMultiDevice\Model\SendLocationRequest
 
@@ -345,7 +381,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -371,11 +407,17 @@ Send Message
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $send_message_request = new \SdkWhatsappWebMultiDevice\Model\SendMessageRequest(); // \SdkWhatsappWebMultiDevice\Model\SendMessageRequest
 
@@ -399,7 +441,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -425,11 +467,17 @@ Send Poll / Vote
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $send_poll_request = new \SdkWhatsappWebMultiDevice\Model\SendPollRequest(); // \SdkWhatsappWebMultiDevice\Model\SendPollRequest
 
@@ -453,7 +501,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -479,11 +527,17 @@ Send presence status
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $send_presence_request = new \SdkWhatsappWebMultiDevice\Model\SendPresenceRequest(); // \SdkWhatsappWebMultiDevice\Model\SendPresenceRequest
 
@@ -507,7 +561,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -533,11 +587,17 @@ Send Video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $phone = 'phone_example'; // string | Phone number with country code
 $caption = 'caption_example'; // string | Caption to send
@@ -569,7 +629,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 

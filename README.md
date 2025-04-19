@@ -7,8 +7,7 @@ This API is used for sending whatsapp via API
 
 ### Requirements
 
-PHP 7.4 and later.
-Should also work with PHP 8.0.
+PHP 8.1 and later.
 
 ### Composer
 
@@ -49,11 +48,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new SdkWhatsappWebMultiDevice\Api\AppApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -77,11 +82,14 @@ Class | Method | HTTP request | Description
 *AppApi* | [**appLogout**](docs/Api/AppApi.md#applogout) | **GET** /app/logout | Remove database and logout
 *AppApi* | [**appReconnect**](docs/Api/AppApi.md#appreconnect) | **GET** /app/reconnect | Reconnecting to whatsapp server
 *GroupApi* | [**addParticipantToGroup**](docs/Api/GroupApi.md#addparticipanttogroup) | **POST** /group/participants | Adding more participants to group
+*GroupApi* | [**approveGroupParticipantRequest**](docs/Api/GroupApi.md#approvegroupparticipantrequest) | **POST** /group/participant-requests/approve | Approve participant request to join group
 *GroupApi* | [**createGroup**](docs/Api/GroupApi.md#creategroup) | **POST** /group | Create group and add participant
 *GroupApi* | [**demoteParticipantToMember**](docs/Api/GroupApi.md#demoteparticipanttomember) | **POST** /group/participants/demote | Demote participants to member
+*GroupApi* | [**getGroupParticipantRequests**](docs/Api/GroupApi.md#getgroupparticipantrequests) | **GET** /group/participant-requests | Get list of participant requests to join group
 *GroupApi* | [**joinGroupWithLink**](docs/Api/GroupApi.md#joingroupwithlink) | **POST** /group/join-with-link | Join group with link
 *GroupApi* | [**leaveGroup**](docs/Api/GroupApi.md#leavegroup) | **POST** /group/leave | Leave group
 *GroupApi* | [**promoteParticipantToAdmin**](docs/Api/GroupApi.md#promoteparticipanttoadmin) | **POST** /group/participants/promote | Promote participants to admin
+*GroupApi* | [**rejectGroupParticipantRequest**](docs/Api/GroupApi.md#rejectgroupparticipantrequest) | **POST** /group/participant-requests/reject | Reject participant request to join group
 *GroupApi* | [**removeParticipantFromGroup**](docs/Api/GroupApi.md#removeparticipantfromgroup) | **POST** /group/participants/remove | Remove participants from group
 *MessageApi* | [**deleteMessage**](docs/Api/MessageApi.md#deletemessage) | **POST** /message/{message_id}/delete | Delete Message
 *MessageApi* | [**reactMessage**](docs/Api/MessageApi.md#reactmessage) | **POST** /message/{message_id}/reaction | Send reaction to message
@@ -101,6 +109,7 @@ Class | Method | HTTP request | Description
 *SendApi* | [**sendVideo**](docs/Api/SendApi.md#sendvideo) | **POST** /send/video | Send Video
 *UserApi* | [**userAvatar**](docs/Api/UserApi.md#useravatar) | **GET** /user/avatar | User Avatar
 *UserApi* | [**userChangeAvatar**](docs/Api/UserApi.md#userchangeavatar) | **POST** /user/avatar | User Change Avatar
+*UserApi* | [**userChangePushName**](docs/Api/UserApi.md#userchangepushname) | **POST** /user/pushname | User Change Push Name
 *UserApi* | [**userInfo**](docs/Api/UserApi.md#userinfo) | **GET** /user/info | User Info
 *UserApi* | [**userMyContacts**](docs/Api/UserApi.md#usermycontacts) | **GET** /user/my/contacts | Get list of user contacts
 *UserApi* | [**userMyGroups**](docs/Api/UserApi.md#usermygroups) | **GET** /user/my/groups | User My List Groups
@@ -109,6 +118,7 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [ApproveGroupParticipantRequestRequest](docs/Model/ApproveGroupParticipantRequestRequest.md)
 - [CreateGroupRequest](docs/Model/CreateGroupRequest.md)
 - [CreateGroupResponse](docs/Model/CreateGroupResponse.md)
 - [CreateGroupResponseResults](docs/Model/CreateGroupResponseResults.md)
@@ -118,6 +128,9 @@ Class | Method | HTTP request | Description
 - [ErrorInternalServer](docs/Model/ErrorInternalServer.md)
 - [GenericResponse](docs/Model/GenericResponse.md)
 - [Group](docs/Model/Group.md)
+- [GroupParticipantRequestListResponse](docs/Model/GroupParticipantRequestListResponse.md)
+- [GroupParticipantRequestListResponseResults](docs/Model/GroupParticipantRequestListResponseResults.md)
+- [GroupParticipantRequestListResponseResultsDataInner](docs/Model/GroupParticipantRequestListResponseResultsDataInner.md)
 - [GroupResponse](docs/Model/GroupResponse.md)
 - [GroupResponseResults](docs/Model/GroupResponseResults.md)
 - [JoinGroupWithLinkRequest](docs/Model/JoinGroupWithLinkRequest.md)
@@ -147,6 +160,7 @@ Class | Method | HTTP request | Description
 - [Participant](docs/Model/Participant.md)
 - [ReactMessageRequest](docs/Model/ReactMessageRequest.md)
 - [ReadMessageRequest](docs/Model/ReadMessageRequest.md)
+- [RejectGroupParticipantRequestRequest](docs/Model/RejectGroupParticipantRequestRequest.md)
 - [RevokeMessageRequest](docs/Model/RevokeMessageRequest.md)
 - [SendContactRequest](docs/Model/SendContactRequest.md)
 - [SendLinkRequest](docs/Model/SendLinkRequest.md)
@@ -160,6 +174,7 @@ Class | Method | HTTP request | Description
 - [UpdateMessageRequest](docs/Model/UpdateMessageRequest.md)
 - [UserAvatarResponse](docs/Model/UserAvatarResponse.md)
 - [UserAvatarResponseResults](docs/Model/UserAvatarResponseResults.md)
+- [UserChangePushNameRequest](docs/Model/UserChangePushNameRequest.md)
 - [UserGroupResponse](docs/Model/UserGroupResponse.md)
 - [UserGroupResponseResults](docs/Model/UserGroupResponseResults.md)
 - [UserGroupResponseResultsDataInner](docs/Model/UserGroupResponseResultsDataInner.md)
@@ -171,7 +186,11 @@ Class | Method | HTTP request | Description
 - [UserPrivacyResponseResults](docs/Model/UserPrivacyResponseResults.md)
 
 ## Authorization
-Endpoints do not require authorization.
+
+Authentication schemes defined for the API:
+### basicAuth
+
+- **Type**: HTTP basic authentication
 
 ## Tests
 
@@ -190,6 +209,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `5.2.0`
-    - Generator version: `7.12.0-SNAPSHOT`
+- API version: `5.4.0`
+    - Generator version: `7.13.0-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
