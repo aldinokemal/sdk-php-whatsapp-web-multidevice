@@ -5,6 +5,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**sendAudio()**](SendApi.md#sendAudio) | **POST** /send/audio | Send Audio |
+| [**sendChatPresence()**](SendApi.md#sendChatPresence) | **POST** /send/chat-presence | Send chat presence (typing indicator) |
 | [**sendContact()**](SendApi.md#sendContact) | **POST** /send/contact | Send Contact |
 | [**sendFile()**](SendApi.md#sendFile) | **POST** /send/file | Send File |
 | [**sendImage()**](SendApi.md#sendImage) | **POST** /send/image | Send Image |
@@ -19,7 +20,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 ## `sendAudio()`
 
 ```php
-sendAudio($phone, $audio): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendAudio($phone, $audio, $audio_url, $is_forwarded, $duration): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Audio
@@ -45,9 +46,12 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
 );
 $phone = 'phone_example'; // string | Phone number with country code
 $audio = '/path/to/file.txt'; // \SplFileObject | Audio to send
+$audio_url = 'audio_url_example'; // string | Audio URL to send
+$is_forwarded = True; // bool | Whether this is a forwarded message
+$duration = 56; // int | Disappearing message duration in seconds (optional)
 
 try {
-    $result = $apiInstance->sendAudio($phone, $audio);
+    $result = $apiInstance->sendAudio($phone, $audio, $audio_url, $is_forwarded, $duration);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendAudio: ', $e->getMessage(), PHP_EOL;
@@ -60,6 +64,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **phone** | **string**| Phone number with country code | [optional] |
 | **audio** | **\SplFileObject****\SplFileObject**| Audio to send | [optional] |
+| **audio_url** | **string**| Audio URL to send | [optional] |
+| **is_forwarded** | **bool**| Whether this is a forwarded message | [optional] |
+| **duration** | **int**| Disappearing message duration in seconds (optional) | [optional] |
 
 ### Return type
 
@@ -72,6 +79,68 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `multipart/form-data`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sendChatPresence()`
+
+```php
+sendChatPresence($send_chat_presence_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
+```
+
+Send chat presence (typing indicator)
+
+Send typing indicator to start or stop showing that you are composing a message
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$send_chat_presence_request = new \SdkWhatsappWebMultiDevice\Model\SendChatPresenceRequest(); // \SdkWhatsappWebMultiDevice\Model\SendChatPresenceRequest
+
+try {
+    $result = $apiInstance->sendChatPresence($send_chat_presence_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SendApi->sendChatPresence: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **send_chat_presence_request** | [**\SdkWhatsappWebMultiDevice\Model\SendChatPresenceRequest**](../Model/SendChatPresenceRequest.md)|  | |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -141,7 +210,7 @@ try {
 ## `sendFile()`
 
 ```php
-sendFile($phone, $caption, $file): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendFile($phone, $caption, $file, $is_forwarded, $duration): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send File
@@ -168,9 +237,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
 $phone = 'phone_example'; // string | Phone number with country code
 $caption = 'caption_example'; // string | Caption to send
 $file = '/path/to/file.txt'; // \SplFileObject | File to send
+$is_forwarded = True; // bool | Whether this is a forwarded message
+$duration = 56; // int | Disappearing message duration in seconds (optional)
 
 try {
-    $result = $apiInstance->sendFile($phone, $caption, $file);
+    $result = $apiInstance->sendFile($phone, $caption, $file, $is_forwarded, $duration);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendFile: ', $e->getMessage(), PHP_EOL;
@@ -184,6 +255,8 @@ try {
 | **phone** | **string**| Phone number with country code | [optional] |
 | **caption** | **string**| Caption to send | [optional] |
 | **file** | **\SplFileObject****\SplFileObject**| File to send | [optional] |
+| **is_forwarded** | **bool**| Whether this is a forwarded message | [optional] |
+| **duration** | **int**| Disappearing message duration in seconds (optional) | [optional] |
 
 ### Return type
 
@@ -205,7 +278,7 @@ try {
 ## `sendImage()`
 
 ```php
-sendImage($phone, $caption, $view_once, $image, $image_url, $compress): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendImage($phone, $caption, $view_once, $image, $image_url, $compress, $duration, $is_forwarded): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Image
@@ -235,9 +308,11 @@ $view_once = True; // bool | View once
 $image = '/path/to/file.txt'; // \SplFileObject | Image to send
 $image_url = 'image_url_example'; // string | Image URL to send
 $compress = True; // bool | Compress image
+$duration = 56; // int | Disappearing message duration in seconds (optional)
+$is_forwarded = True; // bool | Whether this is a forwarded message
 
 try {
-    $result = $apiInstance->sendImage($phone, $caption, $view_once, $image, $image_url, $compress);
+    $result = $apiInstance->sendImage($phone, $caption, $view_once, $image, $image_url, $compress, $duration, $is_forwarded);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendImage: ', $e->getMessage(), PHP_EOL;
@@ -254,6 +329,8 @@ try {
 | **image** | **\SplFileObject****\SplFileObject**| Image to send | [optional] |
 | **image_url** | **string**| Image URL to send | [optional] |
 | **compress** | **bool**| Compress image | [optional] |
+| **duration** | **int**| Disappearing message duration in seconds (optional) | [optional] |
+| **is_forwarded** | **bool**| Whether this is a forwarded message | [optional] |
 
 ### Return type
 
@@ -575,7 +652,7 @@ try {
 ## `sendVideo()`
 
 ```php
-sendVideo($phone, $caption, $view_once, $video, $compress): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendVideo($phone, $caption, $view_once, $video, $video_url, $compress, $duration, $is_forwarded): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Video
@@ -603,10 +680,13 @@ $phone = 'phone_example'; // string | Phone number with country code
 $caption = 'caption_example'; // string | Caption to send
 $view_once = True; // bool | View once
 $video = '/path/to/file.txt'; // \SplFileObject | Video to send
+$video_url = 'video_url_example'; // string | Video URL to send
 $compress = True; // bool | Compress video
+$duration = 56; // int | Disappearing message duration in seconds (optional)
+$is_forwarded = True; // bool | Whether this is a forwarded message
 
 try {
-    $result = $apiInstance->sendVideo($phone, $caption, $view_once, $video, $compress);
+    $result = $apiInstance->sendVideo($phone, $caption, $view_once, $video, $video_url, $compress, $duration, $is_forwarded);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendVideo: ', $e->getMessage(), PHP_EOL;
@@ -621,7 +701,10 @@ try {
 | **caption** | **string**| Caption to send | [optional] |
 | **view_once** | **bool**| View once | [optional] |
 | **video** | **\SplFileObject****\SplFileObject**| Video to send | [optional] |
+| **video_url** | **string**| Video URL to send | [optional] |
 | **compress** | **bool**| Compress video | [optional] |
+| **duration** | **int**| Disappearing message duration in seconds (optional) | [optional] |
+| **is_forwarded** | **bool**| Whether this is a forwarded message | [optional] |
 
 ### Return type
 

@@ -8,6 +8,8 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 | [**reactMessage()**](MessageApi.md#reactMessage) | **POST** /message/{message_id}/reaction | Send reaction to message |
 | [**readMessage()**](MessageApi.md#readMessage) | **POST** /message/{message_id}/read | Mark as read message |
 | [**revokeMessage()**](MessageApi.md#revokeMessage) | **POST** /message/{message_id}/revoke | Revoke Message |
+| [**starMessage()**](MessageApi.md#starMessage) | **POST** /message/{message_id}/star | Star message |
+| [**unstarMessage()**](MessageApi.md#unstarMessage) | **POST** /message/{message_id}/unstar | Unstar message |
 | [**updateMessage()**](MessageApi.md#updateMessage) | **POST** /message/{message_id}/update | Edit message by message ID before 15 minutes |
 
 
@@ -245,6 +247,130 @@ try {
 ### Return type
 
 [**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `starMessage()`
+
+```php
+starMessage($message_id, $read_message_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+```
+
+Star message
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\MessageApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$message_id = 'message_id_example'; // string | Message ID
+$read_message_request = new \SdkWhatsappWebMultiDevice\Model\ReadMessageRequest(); // \SdkWhatsappWebMultiDevice\Model\ReadMessageRequest
+
+try {
+    $result = $apiInstance->starMessage($message_id, $read_message_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MessageApi->starMessage: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **message_id** | **string**| Message ID | |
+| **read_message_request** | [**\SdkWhatsappWebMultiDevice\Model\ReadMessageRequest**](../Model/ReadMessageRequest.md)|  | [optional] |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\GenericResponse**](../Model/GenericResponse.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `unstarMessage()`
+
+```php
+unstarMessage($message_id, $read_message_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+```
+
+Unstar message
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\MessageApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$message_id = 'message_id_example'; // string | Message ID
+$read_message_request = new \SdkWhatsappWebMultiDevice\Model\ReadMessageRequest(); // \SdkWhatsappWebMultiDevice\Model\ReadMessageRequest
+
+try {
+    $result = $apiInstance->unstarMessage($message_id, $read_message_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MessageApi->unstarMessage: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **message_id** | **string**| Message ID | |
+| **read_message_request** | [**\SdkWhatsappWebMultiDevice\Model\ReadMessageRequest**](../Model/ReadMessageRequest.md)|  | [optional] |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\GenericResponse**](../Model/GenericResponse.md)
 
 ### Authorization
 

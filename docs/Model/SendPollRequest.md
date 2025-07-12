@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **question** | **string** | The question for the poll. |
 **options** | **string[]** | The options for the poll. |
 **max_answer** | **int** | The maximum number of answers allowed for the poll. |
+**duration** | **int** | Disappearing message duration in seconds (optional) | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
