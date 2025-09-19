@@ -8,9 +8,12 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 | [**approveGroupParticipantRequest()**](GroupApi.md#approveGroupParticipantRequest) | **POST** /group/participant-requests/approve | Approve participant request to join group |
 | [**createGroup()**](GroupApi.md#createGroup) | **POST** /group | Create group and add participant |
 | [**demoteParticipantToMember()**](GroupApi.md#demoteParticipantToMember) | **POST** /group/participants/demote | Demote participants to member |
+| [**exportGroupParticipants()**](GroupApi.md#exportGroupParticipants) | **GET** /group/participants/export | Export group participants as CSV |
 | [**getGroupInfoFromLink()**](GroupApi.md#getGroupInfoFromLink) | **GET** /group/info-from-link | Get group information from invitation link |
 | [**getGroupParticipantRequests()**](GroupApi.md#getGroupParticipantRequests) | **GET** /group/participant-requests | Get list of participant requests to join group |
+| [**getGroupParticipants()**](GroupApi.md#getGroupParticipants) | **GET** /group/participants | Get list of participants in a group |
 | [**groupInfo()**](GroupApi.md#groupInfo) | **GET** /group/info | Group Info |
+| [**groupInviteLink()**](GroupApi.md#groupInviteLink) | **GET** /group/invite-link | Group Invite Link |
 | [**joinGroupWithLink()**](GroupApi.md#joinGroupWithLink) | **POST** /group/join-with-link | Join group with link |
 | [**leaveGroup()**](GroupApi.md#leaveGroup) | **POST** /group/leave | Leave group |
 | [**promoteParticipantToAdmin()**](GroupApi.md#promoteParticipantToAdmin) | **POST** /group/participants/promote | Promote participants to admin |
@@ -263,6 +266,66 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `exportGroupParticipants()`
+
+```php
+exportGroupParticipants($group_id): \SplFileObject
+```
+
+Export group participants as CSV
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$group_id = 120363024512399999@g.us; // string | The group ID to export participants for
+
+try {
+    $result = $apiInstance->exportGroupParticipants($group_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupApi->exportGroupParticipants: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **group_id** | **string**| The group ID to export participants for | |
+
+### Return type
+
+**\SplFileObject**
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/csv`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getGroupInfoFromLink()`
 
 ```php
@@ -385,6 +448,66 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getGroupParticipants()`
+
+```php
+getGroupParticipants($group_id): \SdkWhatsappWebMultiDevice\Model\GroupParticipantsResponse
+```
+
+Get list of participants in a group
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$group_id = 120363024512399999@g.us; // string | The group ID to fetch participants for
+
+try {
+    $result = $apiInstance->getGroupParticipants($group_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupApi->getGroupParticipants: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **group_id** | **string**| The group ID to fetch participants for | |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\GroupParticipantsResponse**](../Model/GroupParticipantsResponse.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `groupInfo()`
 
 ```php
@@ -431,6 +554,68 @@ try {
 ### Return type
 
 [**\SdkWhatsappWebMultiDevice\Model\GroupInfoResponse**](../Model/GroupInfoResponse.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `groupInviteLink()`
+
+```php
+groupInviteLink($group_id, $reset): \SdkWhatsappWebMultiDevice\Model\GetGroupInviteLinkResponse
+```
+
+Group Invite Link
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$group_id = 'group_id_example'; // string | WhatsApp Group ID
+$reset = false; // bool | Reset existing invite link
+
+try {
+    $result = $apiInstance->groupInviteLink($group_id, $reset);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupApi->groupInviteLink: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **group_id** | **string**| WhatsApp Group ID | |
+| **reset** | **bool**| Reset existing invite link | [optional] [default to false] |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\GetGroupInviteLinkResponse**](../Model/GetGroupInviteLinkResponse.md)
 
 ### Authorization
 
