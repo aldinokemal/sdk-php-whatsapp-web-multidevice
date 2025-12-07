@@ -1,5 +1,7 @@
 # SdkWhatsappWebMultiDevice\SendApi
 
+Send Message (Text/Image/File/Video).
+
 All URIs are relative to http://localhost:3000, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -14,6 +16,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 | [**sendMessage()**](SendApi.md#sendMessage) | **POST** /send/message | Send Message |
 | [**sendPoll()**](SendApi.md#sendPoll) | **POST** /send/poll | Send Poll / Vote |
 | [**sendPresence()**](SendApi.md#sendPresence) | **POST** /send/presence | Send presence status |
+| [**sendSticker()**](SendApi.md#sendSticker) | **POST** /send/sticker | Send Sticker |
 | [**sendVideo()**](SendApi.md#sendVideo) | **POST** /send/video | Send Video |
 
 
@@ -643,6 +646,76 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sendSticker()`
+
+```php
+sendSticker($phone, $sticker, $sticker_url, $duration, $is_forwarded): \SdkWhatsappWebMultiDevice\Model\SendResponse
+```
+
+Send Sticker
+
+Send sticker with automatic conversion to WebP format
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = SdkWhatsappWebMultiDevice\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$phone = 'phone_example'; // string | Phone number with country code
+$sticker = '/path/to/file.txt'; // \SplFileObject | Sticker image file (jpg/jpeg/png/webp/gif)
+$sticker_url = 'sticker_url_example'; // string | URL of sticker image to send
+$duration = 56; // int | Disappearing message duration in seconds (optional)
+$is_forwarded = True; // bool | Whether this is a forwarded sticker
+
+try {
+    $result = $apiInstance->sendSticker($phone, $sticker, $sticker_url, $duration, $is_forwarded);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SendApi->sendSticker: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **phone** | **string**| Phone number with country code | [optional] |
+| **sticker** | **\SplFileObject****\SplFileObject**| Sticker image file (jpg/jpeg/png/webp/gif) | [optional] |
+| **sticker_url** | **string**| URL of sticker image to send | [optional] |
+| **duration** | **int**| Disappearing message duration in seconds (optional) | [optional] |
+| **is_forwarded** | **bool**| Whether this is a forwarded sticker | [optional] |
+
+### Return type
+
+[**\SdkWhatsappWebMultiDevice\Model\SendResponse**](../Model/SendResponse.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `multipart/form-data`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

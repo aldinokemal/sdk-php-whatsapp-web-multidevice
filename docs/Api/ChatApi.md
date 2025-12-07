@@ -1,5 +1,7 @@
 # SdkWhatsappWebMultiDevice\ChatApi
 
+Chat conversations and messaging
+
 All URIs are relative to http://localhost:3000, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
