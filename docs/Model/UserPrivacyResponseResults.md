@@ -1,4 +1,4 @@
-# # UserPrivacyResponseResults
+# UserPrivacyResponseResults
 
 ## Properties
 

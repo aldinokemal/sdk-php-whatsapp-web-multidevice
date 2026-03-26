@@ -1,4 +1,4 @@
-# # BusinessProfileResponseResults
+# BusinessProfileResponseResults
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # UserAvatarResponseResults
+# UserAvatarResponseResults
 
 ## Properties
 

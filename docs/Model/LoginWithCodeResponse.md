@@ -1,4 +1,4 @@
-# # LoginWithCodeResponse
+# LoginWithCodeResponse
 
 ## Properties
 

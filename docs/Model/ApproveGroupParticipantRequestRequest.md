@@ -1,4 +1,4 @@
-# # ApproveGroupParticipantRequestRequest
+# ApproveGroupParticipantRequestRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # LabelChatResponseResults
+# LabelChatResponseResults
 
 ## Properties
 

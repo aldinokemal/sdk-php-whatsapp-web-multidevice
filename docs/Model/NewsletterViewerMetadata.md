@@ -1,4 +1,4 @@
-# # NewsletterViewerMetadata
+# NewsletterViewerMetadata
 
 ## Properties
 

@@ -21,7 +21,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 ## `userAvatar()`
 
 ```php
-userAvatar($phone, $is_preview, $is_community): \SdkWhatsappWebMultiDevice\Model\UserAvatarResponse
+userAvatar($x_device_id, $phone, $is_preview, $is_community): \SdkWhatsappWebMultiDevice\Model\UserAvatarResponse
 ```
 
 User Avatar
@@ -45,12 +45,13 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $phone = 6289685028129@s.whatsapp.net; // string | Phone number with country code
 $is_preview = true; // bool | Whether to fetch a preview of the avatar
 $is_community = false; // bool | Whether to fetch a community avatar
 
 try {
-    $result = $apiInstance->userAvatar($phone, $is_preview, $is_community);
+    $result = $apiInstance->userAvatar($x_device_id, $phone, $is_preview, $is_community);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userAvatar: ', $e->getMessage(), PHP_EOL;
@@ -61,6 +62,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **phone** | **string**| Phone number with country code | [optional] |
 | **is_preview** | **bool**| Whether to fetch a preview of the avatar | [optional] |
 | **is_community** | **bool**| Whether to fetch a community avatar | [optional] |
@@ -85,7 +87,7 @@ try {
 ## `userBusinessProfile()`
 
 ```php
-userBusinessProfile($phone): \SdkWhatsappWebMultiDevice\Model\BusinessProfileResponse
+userBusinessProfile($phone, $x_device_id): \SdkWhatsappWebMultiDevice\Model\BusinessProfileResponse
 ```
 
 Get Business Profile Information
@@ -112,9 +114,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     $config
 );
 $phone = 6289685028129@s.whatsapp.net; // string | Phone number with country code of the business account
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->userBusinessProfile($phone);
+    $result = $apiInstance->userBusinessProfile($phone, $x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userBusinessProfile: ', $e->getMessage(), PHP_EOL;
@@ -126,6 +129,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **phone** | **string**| Phone number with country code of the business account | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -147,7 +151,7 @@ try {
 ## `userChangeAvatar()`
 
 ```php
-userChangeAvatar($avatar): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+userChangeAvatar($x_device_id, $avatar): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 User Change Avatar
@@ -171,10 +175,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $avatar = '/path/to/file.txt'; // \SplFileObject | Avatar to send
 
 try {
-    $result = $apiInstance->userChangeAvatar($avatar);
+    $result = $apiInstance->userChangeAvatar($x_device_id, $avatar);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userChangeAvatar: ', $e->getMessage(), PHP_EOL;
@@ -185,6 +190,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **avatar** | **\SplFileObject****\SplFileObject**| Avatar to send | [optional] |
 
 ### Return type
@@ -207,7 +213,7 @@ try {
 ## `userChangePushName()`
 
 ```php
-userChangePushName($user_change_push_name_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+userChangePushName($x_device_id, $user_change_push_name_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 User Change Push Name
@@ -233,10 +239,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $user_change_push_name_request = new \SdkWhatsappWebMultiDevice\Model\UserChangePushNameRequest(); // \SdkWhatsappWebMultiDevice\Model\UserChangePushNameRequest
 
 try {
-    $result = $apiInstance->userChangePushName($user_change_push_name_request);
+    $result = $apiInstance->userChangePushName($x_device_id, $user_change_push_name_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userChangePushName: ', $e->getMessage(), PHP_EOL;
@@ -247,6 +254,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **user_change_push_name_request** | [**\SdkWhatsappWebMultiDevice\Model\UserChangePushNameRequest**](../Model/UserChangePushNameRequest.md)|  | [optional] |
 
 ### Return type
@@ -269,7 +277,7 @@ try {
 ## `userCheck()`
 
 ```php
-userCheck($phone): \SdkWhatsappWebMultiDevice\Model\UserCheckResponse
+userCheck($x_device_id, $phone): \SdkWhatsappWebMultiDevice\Model\UserCheckResponse
 ```
 
 Check if user is on WhatsApp
@@ -293,10 +301,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $phone = 628912344551; // string | Phone number with country code
 
 try {
-    $result = $apiInstance->userCheck($phone);
+    $result = $apiInstance->userCheck($x_device_id, $phone);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userCheck: ', $e->getMessage(), PHP_EOL;
@@ -307,6 +316,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **phone** | **string**| Phone number with country code | [optional] |
 
 ### Return type
@@ -329,7 +339,7 @@ try {
 ## `userInfo()`
 
 ```php
-userInfo($phone): \SdkWhatsappWebMultiDevice\Model\UserInfoResponse
+userInfo($x_device_id, $phone): \SdkWhatsappWebMultiDevice\Model\UserInfoResponse
 ```
 
 User Info
@@ -353,10 +363,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $phone = 6289685028129@s.whatsapp.net; // string | Phone number with country code
 
 try {
-    $result = $apiInstance->userInfo($phone);
+    $result = $apiInstance->userInfo($x_device_id, $phone);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userInfo: ', $e->getMessage(), PHP_EOL;
@@ -367,6 +378,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **phone** | **string**| Phone number with country code | [optional] |
 
 ### Return type
@@ -389,7 +401,7 @@ try {
 ## `userMyContacts()`
 
 ```php
-userMyContacts(): \SdkWhatsappWebMultiDevice\Model\MyListContactsResponse
+userMyContacts($x_device_id): \SdkWhatsappWebMultiDevice\Model\MyListContactsResponse
 ```
 
 Get list of user contacts
@@ -413,9 +425,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->userMyContacts();
+    $result = $apiInstance->userMyContacts($x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userMyContacts: ', $e->getMessage(), PHP_EOL;
@@ -424,7 +437,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -446,10 +461,12 @@ This endpoint does not need any parameter.
 ## `userMyGroups()`
 
 ```php
-userMyGroups(): \SdkWhatsappWebMultiDevice\Model\UserGroupResponse
+userMyGroups($x_device_id): \SdkWhatsappWebMultiDevice\Model\UserGroupResponse
 ```
 
 User My List Groups
+
+Get all groups that the authenticated user has joined.  ⚠️ **Known Limitation**: This endpoint returns a maximum of 500 groups due to a WhatsApp protocol limitation. The underlying whatsmeow library's `GetJoinedGroups()` function sends a single query to WhatsApp servers, which enforces this limit. This is not a bug in this API - it's a constraint imposed by WhatsApp's multi-device protocol. Users with more than 500 groups will only receive the first 500 groups.  For more details, see: https://github.com/tulir/whatsmeow/blob/main/group.go
 
 ### Example
 
@@ -470,9 +487,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->userMyGroups();
+    $result = $apiInstance->userMyGroups($x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userMyGroups: ', $e->getMessage(), PHP_EOL;
@@ -481,7 +499,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -503,7 +523,7 @@ This endpoint does not need any parameter.
 ## `userMyNewsletter()`
 
 ```php
-userMyNewsletter(): \SdkWhatsappWebMultiDevice\Model\NewsletterResponse
+userMyNewsletter($x_device_id): \SdkWhatsappWebMultiDevice\Model\NewsletterResponse
 ```
 
 User My List Groups
@@ -527,9 +547,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->userMyNewsletter();
+    $result = $apiInstance->userMyNewsletter($x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userMyNewsletter: ', $e->getMessage(), PHP_EOL;
@@ -538,7 +559,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -560,7 +583,7 @@ This endpoint does not need any parameter.
 ## `userMyPrivacy()`
 
 ```php
-userMyPrivacy(): \SdkWhatsappWebMultiDevice\Model\UserPrivacyResponse
+userMyPrivacy($x_device_id): \SdkWhatsappWebMultiDevice\Model\UserPrivacyResponse
 ```
 
 User My Privacy Setting
@@ -584,9 +607,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->userMyPrivacy();
+    $result = $apiInstance->userMyPrivacy($x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->userMyPrivacy: ', $e->getMessage(), PHP_EOL;
@@ -595,7 +619,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 

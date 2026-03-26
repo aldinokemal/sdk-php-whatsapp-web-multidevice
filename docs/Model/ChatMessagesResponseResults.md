@@ -1,4 +1,4 @@
-# # ChatMessagesResponseResults
+# ChatMessagesResponseResults
 
 ## Properties
 

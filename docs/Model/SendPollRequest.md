@@ -1,4 +1,4 @@
-# # SendPollRequest
+# SendPollRequest
 
 ## Properties
 

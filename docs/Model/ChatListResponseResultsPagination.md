@@ -1,4 +1,4 @@
-# # ChatListResponseResultsPagination
+# ChatListResponseResultsPagination
 
 ## Properties
 

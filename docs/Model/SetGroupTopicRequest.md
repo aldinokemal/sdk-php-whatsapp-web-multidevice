@@ -1,4 +1,4 @@
-# # SetGroupTopicRequest
+# SetGroupTopicRequest
 
 ## Properties
 

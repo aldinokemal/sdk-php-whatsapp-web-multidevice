@@ -1,4 +1,4 @@
-# # SetGroupPhotoResponseResults
+# SetGroupPhotoResponseResults
 
 ## Properties
 

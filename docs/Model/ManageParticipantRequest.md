@@ -1,4 +1,4 @@
-# # ManageParticipantRequest
+# ManageParticipantRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # GroupInfoResponse
+# GroupInfoResponse
 
 ## Properties
 

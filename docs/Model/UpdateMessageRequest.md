@@ -1,4 +1,4 @@
-# # UpdateMessageRequest
+# UpdateMessageRequest
 
 ## Properties
 

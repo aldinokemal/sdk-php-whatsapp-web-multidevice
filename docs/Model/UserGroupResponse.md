@@ -1,4 +1,4 @@
-# # UserGroupResponse
+# UserGroupResponse
 
 ## Properties
 

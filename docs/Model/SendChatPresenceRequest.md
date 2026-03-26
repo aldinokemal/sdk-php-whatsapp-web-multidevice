@@ -1,4 +1,4 @@
-# # SendChatPresenceRequest
+# SendChatPresenceRequest
 
 ## Properties
 

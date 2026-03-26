@@ -1,4 +1,4 @@
-# # ManageParticipantResponseResultsInner
+# ManageParticipantResponseResultsInner
 
 ## Properties
 

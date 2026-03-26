@@ -1,4 +1,4 @@
-# # UserInfoResponseResultsDevicesInner
+# UserInfoResponseResultsDevicesInner
 
 ## Properties
 

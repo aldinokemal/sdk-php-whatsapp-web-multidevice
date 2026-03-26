@@ -1,4 +1,4 @@
-# # UserGroupResponseResultsDataInnerParticipantsInner
+# UserGroupResponseResultsDataInnerParticipantsInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # GroupParticipantRequestListResponse
+# GroupParticipantRequestListResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # ChatMessagesResponseResultsPagination
+# ChatMessagesResponseResultsPagination
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # UserCheckResponseResults
+# UserCheckResponseResults
 
 ## Properties
 

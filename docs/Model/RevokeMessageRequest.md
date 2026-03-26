@@ -1,4 +1,4 @@
-# # RevokeMessageRequest
+# RevokeMessageRequest
 
 ## Properties
 

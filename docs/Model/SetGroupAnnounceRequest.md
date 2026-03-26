@@ -1,4 +1,4 @@
-# # SetGroupAnnounceRequest
+# SetGroupAnnounceRequest
 
 ## Properties
 

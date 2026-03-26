@@ -1,4 +1,4 @@
-# # ReadMessageRequest
+# ReadMessageRequest
 
 ## Properties
 

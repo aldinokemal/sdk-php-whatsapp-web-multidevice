@@ -12,7 +12,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 ## `unfollowNewsletter()`
 
 ```php
-unfollowNewsletter($unfollow_newsletter_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+unfollowNewsletter($x_device_id, $unfollow_newsletter_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Unfollow newsletter
@@ -36,10 +36,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\NewsletterApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $unfollow_newsletter_request = new \SdkWhatsappWebMultiDevice\Model\UnfollowNewsletterRequest(); // \SdkWhatsappWebMultiDevice\Model\UnfollowNewsletterRequest
 
 try {
-    $result = $apiInstance->unfollowNewsletter($unfollow_newsletter_request);
+    $result = $apiInstance->unfollowNewsletter($x_device_id, $unfollow_newsletter_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NewsletterApi->unfollowNewsletter: ', $e->getMessage(), PHP_EOL;
@@ -50,6 +51,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **unfollow_newsletter_request** | [**\SdkWhatsappWebMultiDevice\Model\UnfollowNewsletterRequest**](../Model/UnfollowNewsletterRequest.md)|  | [optional] |
 
 ### Return type

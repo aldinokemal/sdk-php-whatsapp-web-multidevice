@@ -1,4 +1,4 @@
-# # MyListContactsResponse
+# MyListContactsResponse
 
 ## Properties
 

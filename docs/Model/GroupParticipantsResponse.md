@@ -1,4 +1,4 @@
-# # GroupParticipantsResponse
+# GroupParticipantsResponse
 
 ## Properties
 

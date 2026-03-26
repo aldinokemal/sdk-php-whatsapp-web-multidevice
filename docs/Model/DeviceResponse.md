@@ -1,4 +1,4 @@
-# # DeviceResponse
+# DeviceResponse
 
 ## Properties
 

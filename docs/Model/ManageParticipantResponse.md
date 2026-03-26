@@ -1,4 +1,4 @@
-# # ManageParticipantResponse
+# ManageParticipantResponse
 
 ## Properties
 

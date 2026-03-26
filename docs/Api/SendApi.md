@@ -23,7 +23,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 ## `sendAudio()`
 
 ```php
-sendAudio($phone, $audio, $audio_url, $is_forwarded, $duration): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendAudio($x_device_id, $phone, $audio, $audio_url, $is_forwarded, $duration): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Audio
@@ -47,6 +47,7 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $phone = 'phone_example'; // string | Phone number with country code
 $audio = '/path/to/file.txt'; // \SplFileObject | Audio to send
 $audio_url = 'audio_url_example'; // string | Audio URL to send
@@ -54,7 +55,7 @@ $is_forwarded = True; // bool | Whether this is a forwarded message
 $duration = 56; // int | Disappearing message duration in seconds (optional)
 
 try {
-    $result = $apiInstance->sendAudio($phone, $audio, $audio_url, $is_forwarded, $duration);
+    $result = $apiInstance->sendAudio($x_device_id, $phone, $audio, $audio_url, $is_forwarded, $duration);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendAudio: ', $e->getMessage(), PHP_EOL;
@@ -65,6 +66,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **phone** | **string**| Phone number with country code | [optional] |
 | **audio** | **\SplFileObject****\SplFileObject**| Audio to send | [optional] |
 | **audio_url** | **string**| Audio URL to send | [optional] |
@@ -91,7 +93,7 @@ try {
 ## `sendChatPresence()`
 
 ```php
-sendChatPresence($send_chat_presence_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendChatPresence($send_chat_presence_request, $x_device_id): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send chat presence (typing indicator)
@@ -118,9 +120,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     $config
 );
 $send_chat_presence_request = new \SdkWhatsappWebMultiDevice\Model\SendChatPresenceRequest(); // \SdkWhatsappWebMultiDevice\Model\SendChatPresenceRequest
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->sendChatPresence($send_chat_presence_request);
+    $result = $apiInstance->sendChatPresence($send_chat_presence_request, $x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendChatPresence: ', $e->getMessage(), PHP_EOL;
@@ -132,6 +135,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **send_chat_presence_request** | [**\SdkWhatsappWebMultiDevice\Model\SendChatPresenceRequest**](../Model/SendChatPresenceRequest.md)|  | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -153,7 +157,7 @@ try {
 ## `sendContact()`
 
 ```php
-sendContact($send_contact_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendContact($x_device_id, $send_contact_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Contact
@@ -177,10 +181,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $send_contact_request = new \SdkWhatsappWebMultiDevice\Model\SendContactRequest(); // \SdkWhatsappWebMultiDevice\Model\SendContactRequest
 
 try {
-    $result = $apiInstance->sendContact($send_contact_request);
+    $result = $apiInstance->sendContact($x_device_id, $send_contact_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendContact: ', $e->getMessage(), PHP_EOL;
@@ -191,6 +196,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **send_contact_request** | [**\SdkWhatsappWebMultiDevice\Model\SendContactRequest**](../Model/SendContactRequest.md)|  | [optional] |
 
 ### Return type
@@ -213,7 +219,7 @@ try {
 ## `sendFile()`
 
 ```php
-sendFile($phone, $caption, $file, $is_forwarded, $duration): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendFile($x_device_id, $phone, $caption, $file, $is_forwarded, $duration): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send File
@@ -237,6 +243,7 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $phone = 'phone_example'; // string | Phone number with country code
 $caption = 'caption_example'; // string | Caption to send
 $file = '/path/to/file.txt'; // \SplFileObject | File to send
@@ -244,7 +251,7 @@ $is_forwarded = True; // bool | Whether this is a forwarded message
 $duration = 56; // int | Disappearing message duration in seconds (optional)
 
 try {
-    $result = $apiInstance->sendFile($phone, $caption, $file, $is_forwarded, $duration);
+    $result = $apiInstance->sendFile($x_device_id, $phone, $caption, $file, $is_forwarded, $duration);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendFile: ', $e->getMessage(), PHP_EOL;
@@ -255,6 +262,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **phone** | **string**| Phone number with country code | [optional] |
 | **caption** | **string**| Caption to send | [optional] |
 | **file** | **\SplFileObject****\SplFileObject**| File to send | [optional] |
@@ -281,7 +289,7 @@ try {
 ## `sendImage()`
 
 ```php
-sendImage($phone, $caption, $view_once, $image, $image_url, $compress, $duration, $is_forwarded): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendImage($x_device_id, $phone, $caption, $view_once, $image, $image_url, $compress, $duration, $is_forwarded): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Image
@@ -305,6 +313,7 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $phone = 'phone_example'; // string | Phone number with country code
 $caption = 'caption_example'; // string | Caption to send
 $view_once = True; // bool | View once
@@ -315,7 +324,7 @@ $duration = 56; // int | Disappearing message duration in seconds (optional)
 $is_forwarded = True; // bool | Whether this is a forwarded message
 
 try {
-    $result = $apiInstance->sendImage($phone, $caption, $view_once, $image, $image_url, $compress, $duration, $is_forwarded);
+    $result = $apiInstance->sendImage($x_device_id, $phone, $caption, $view_once, $image, $image_url, $compress, $duration, $is_forwarded);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendImage: ', $e->getMessage(), PHP_EOL;
@@ -326,6 +335,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **phone** | **string**| Phone number with country code | [optional] |
 | **caption** | **string**| Caption to send | [optional] |
 | **view_once** | **bool**| View once | [optional] |
@@ -355,7 +365,7 @@ try {
 ## `sendLink()`
 
 ```php
-sendLink($send_link_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendLink($x_device_id, $send_link_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Link
@@ -379,10 +389,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $send_link_request = new \SdkWhatsappWebMultiDevice\Model\SendLinkRequest(); // \SdkWhatsappWebMultiDevice\Model\SendLinkRequest
 
 try {
-    $result = $apiInstance->sendLink($send_link_request);
+    $result = $apiInstance->sendLink($x_device_id, $send_link_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendLink: ', $e->getMessage(), PHP_EOL;
@@ -393,6 +404,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **send_link_request** | [**\SdkWhatsappWebMultiDevice\Model\SendLinkRequest**](../Model/SendLinkRequest.md)|  | [optional] |
 
 ### Return type
@@ -415,7 +427,7 @@ try {
 ## `sendLocation()`
 
 ```php
-sendLocation($send_location_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendLocation($x_device_id, $send_location_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Location
@@ -439,10 +451,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $send_location_request = new \SdkWhatsappWebMultiDevice\Model\SendLocationRequest(); // \SdkWhatsappWebMultiDevice\Model\SendLocationRequest
 
 try {
-    $result = $apiInstance->sendLocation($send_location_request);
+    $result = $apiInstance->sendLocation($x_device_id, $send_location_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendLocation: ', $e->getMessage(), PHP_EOL;
@@ -453,6 +466,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **send_location_request** | [**\SdkWhatsappWebMultiDevice\Model\SendLocationRequest**](../Model/SendLocationRequest.md)|  | [optional] |
 
 ### Return type
@@ -475,7 +489,7 @@ try {
 ## `sendMessage()`
 
 ```php
-sendMessage($send_message_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendMessage($x_device_id, $send_message_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Message
@@ -499,10 +513,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $send_message_request = new \SdkWhatsappWebMultiDevice\Model\SendMessageRequest(); // \SdkWhatsappWebMultiDevice\Model\SendMessageRequest
 
 try {
-    $result = $apiInstance->sendMessage($send_message_request);
+    $result = $apiInstance->sendMessage($x_device_id, $send_message_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendMessage: ', $e->getMessage(), PHP_EOL;
@@ -513,6 +528,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **send_message_request** | [**\SdkWhatsappWebMultiDevice\Model\SendMessageRequest**](../Model/SendMessageRequest.md)|  | [optional] |
 
 ### Return type
@@ -535,7 +551,7 @@ try {
 ## `sendPoll()`
 
 ```php
-sendPoll($send_poll_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendPoll($send_poll_request, $x_device_id): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Poll / Vote
@@ -560,9 +576,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     $config
 );
 $send_poll_request = new \SdkWhatsappWebMultiDevice\Model\SendPollRequest(); // \SdkWhatsappWebMultiDevice\Model\SendPollRequest
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->sendPoll($send_poll_request);
+    $result = $apiInstance->sendPoll($send_poll_request, $x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendPoll: ', $e->getMessage(), PHP_EOL;
@@ -574,6 +591,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **send_poll_request** | [**\SdkWhatsappWebMultiDevice\Model\SendPollRequest**](../Model/SendPollRequest.md)|  | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -595,7 +613,7 @@ try {
 ## `sendPresence()`
 
 ```php
-sendPresence($send_presence_request): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendPresence($send_presence_request, $x_device_id): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send presence status
@@ -620,9 +638,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     $config
 );
 $send_presence_request = new \SdkWhatsappWebMultiDevice\Model\SendPresenceRequest(); // \SdkWhatsappWebMultiDevice\Model\SendPresenceRequest
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->sendPresence($send_presence_request);
+    $result = $apiInstance->sendPresence($send_presence_request, $x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendPresence: ', $e->getMessage(), PHP_EOL;
@@ -634,6 +653,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **send_presence_request** | [**\SdkWhatsappWebMultiDevice\Model\SendPresenceRequest**](../Model/SendPresenceRequest.md)|  | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -655,7 +675,7 @@ try {
 ## `sendSticker()`
 
 ```php
-sendSticker($phone, $sticker, $sticker_url, $duration, $is_forwarded): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendSticker($x_device_id, $phone, $sticker, $sticker_url, $duration, $is_forwarded): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Sticker
@@ -681,6 +701,7 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $phone = 'phone_example'; // string | Phone number with country code
 $sticker = '/path/to/file.txt'; // \SplFileObject | Sticker image file (jpg/jpeg/png/webp/gif)
 $sticker_url = 'sticker_url_example'; // string | URL of sticker image to send
@@ -688,7 +709,7 @@ $duration = 56; // int | Disappearing message duration in seconds (optional)
 $is_forwarded = True; // bool | Whether this is a forwarded sticker
 
 try {
-    $result = $apiInstance->sendSticker($phone, $sticker, $sticker_url, $duration, $is_forwarded);
+    $result = $apiInstance->sendSticker($x_device_id, $phone, $sticker, $sticker_url, $duration, $is_forwarded);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendSticker: ', $e->getMessage(), PHP_EOL;
@@ -699,6 +720,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **phone** | **string**| Phone number with country code | [optional] |
 | **sticker** | **\SplFileObject****\SplFileObject**| Sticker image file (jpg/jpeg/png/webp/gif) | [optional] |
 | **sticker_url** | **string**| URL of sticker image to send | [optional] |
@@ -725,7 +747,7 @@ try {
 ## `sendVideo()`
 
 ```php
-sendVideo($phone, $caption, $view_once, $video, $video_url, $compress, $duration, $is_forwarded): \SdkWhatsappWebMultiDevice\Model\SendResponse
+sendVideo($x_device_id, $phone, $caption, $view_once, $video, $video_url, $compress, $duration, $is_forwarded): \SdkWhatsappWebMultiDevice\Model\SendResponse
 ```
 
 Send Video
@@ -749,6 +771,7 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\SendApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $phone = 'phone_example'; // string | Phone number with country code
 $caption = 'caption_example'; // string | Caption to send
 $view_once = True; // bool | View once
@@ -759,7 +782,7 @@ $duration = 56; // int | Disappearing message duration in seconds (optional)
 $is_forwarded = True; // bool | Whether this is a forwarded message
 
 try {
-    $result = $apiInstance->sendVideo($phone, $caption, $view_once, $video, $video_url, $compress, $duration, $is_forwarded);
+    $result = $apiInstance->sendVideo($x_device_id, $phone, $caption, $view_once, $video, $video_url, $compress, $duration, $is_forwarded);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SendApi->sendVideo: ', $e->getMessage(), PHP_EOL;
@@ -770,6 +793,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **phone** | **string**| Phone number with country code | [optional] |
 | **caption** | **string**| Caption to send | [optional] |
 | **view_once** | **bool**| View once | [optional] |

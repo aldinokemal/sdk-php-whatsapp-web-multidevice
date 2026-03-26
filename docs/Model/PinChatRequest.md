@@ -1,4 +1,4 @@
-# # PinChatRequest
+# PinChatRequest
 
 ## Properties
 

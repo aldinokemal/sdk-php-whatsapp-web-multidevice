@@ -1,4 +1,4 @@
-# # SetGroupNameRequest
+# SetGroupNameRequest
 
 ## Properties
 

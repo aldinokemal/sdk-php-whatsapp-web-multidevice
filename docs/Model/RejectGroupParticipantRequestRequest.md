@@ -1,4 +1,4 @@
-# # RejectGroupParticipantRequestRequest
+# RejectGroupParticipantRequestRequest
 
 ## Properties
 

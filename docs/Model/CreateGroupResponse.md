@@ -1,4 +1,4 @@
-# # CreateGroupResponse
+# CreateGroupResponse
 
 ## Properties
 

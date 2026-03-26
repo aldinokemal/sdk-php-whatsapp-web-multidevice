@@ -1,4 +1,4 @@
-# # ChatMessage
+# ChatMessage
 
 ## Properties
 

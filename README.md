@@ -1,6 +1,11 @@
 # SdkWhatsappWebMultiDevice
 
-This API is used for sending whatsapp via API
+This API is used for sending whatsapp via API.
+
+Device scoping:
+- Send `X-Device-Id` on all device-scoped REST calls.
+- WebSocket: connect to `/ws?device_id=<id>`.
+
 
 
 ## Installation & Usage
@@ -81,10 +86,25 @@ Class | Method | HTTP request | Description
 *AppApi* | [**appLoginWithCode**](docs/Api/AppApi.md#apploginwithcode) | **GET** /app/login-with-code | Login with pairing code
 *AppApi* | [**appLogout**](docs/Api/AppApi.md#applogout) | **GET** /app/logout | Remove database and logout
 *AppApi* | [**appReconnect**](docs/Api/AppApi.md#appreconnect) | **GET** /app/reconnect | Reconnecting to whatsapp server
+*AppApi* | [**appStatus**](docs/Api/AppApi.md#appstatus) | **GET** /app/status | Get connection status
+*ChatApi* | [**archiveChat**](docs/Api/ChatApi.md#archivechat) | **POST** /chat/{chat_jid}/archive | Archive or unarchive a chat
 *ChatApi* | [**getChatMessages**](docs/Api/ChatApi.md#getchatmessages) | **GET** /chat/{chat_jid}/messages | Get messages from a specific chat
 *ChatApi* | [**labelChat**](docs/Api/ChatApi.md#labelchat) | **POST** /chat/{chat_jid}/label | Label or unlabel a chat
 *ChatApi* | [**listChats**](docs/Api/ChatApi.md#listchats) | **GET** /chats | Get list of chats
 *ChatApi* | [**pinChat**](docs/Api/ChatApi.md#pinchat) | **POST** /chat/{chat_jid}/pin | Pin or unpin a chat
+*ChatApi* | [**setDisappearingTimer**](docs/Api/ChatApi.md#setdisappearingtimer) | **POST** /chat/{chat_jid}/disappearing | Set disappearing messages timer
+*ChatwootApi* | [**chatwootSyncHistory**](docs/Api/ChatwootApi.md#chatwootsynchistory) | **POST** /chatwoot/sync | Sync message history to Chatwoot
+*ChatwootApi* | [**chatwootSyncStatus**](docs/Api/ChatwootApi.md#chatwootsyncstatus) | **GET** /chatwoot/sync/status | Get Chatwoot sync progress
+*ChatwootApi* | [**chatwootWebhook**](docs/Api/ChatwootApi.md#chatwootwebhook) | **POST** /chatwoot/webhook | Chatwoot webhook endpoint
+*DeviceApi* | [**addDevice**](docs/Api/DeviceApi.md#adddevice) | **POST** /devices | Add a new device
+*DeviceApi* | [**getDevice**](docs/Api/DeviceApi.md#getdevice) | **GET** /devices/{device_id} | Get device info
+*DeviceApi* | [**getDeviceStatus**](docs/Api/DeviceApi.md#getdevicestatus) | **GET** /devices/{device_id}/status | Get device connection status
+*DeviceApi* | [**listDevices**](docs/Api/DeviceApi.md#listdevices) | **GET** /devices | List all devices
+*DeviceApi* | [**loginDevice**](docs/Api/DeviceApi.md#logindevice) | **GET** /devices/{device_id}/login | Login device with QR code
+*DeviceApi* | [**loginDeviceWithCode**](docs/Api/DeviceApi.md#logindevicewithcode) | **POST** /devices/{device_id}/login/code | Login device with pairing code
+*DeviceApi* | [**logoutDevice**](docs/Api/DeviceApi.md#logoutdevice) | **POST** /devices/{device_id}/logout | Logout device
+*DeviceApi* | [**reconnectDevice**](docs/Api/DeviceApi.md#reconnectdevice) | **POST** /devices/{device_id}/reconnect | Reconnect device
+*DeviceApi* | [**removeDevice**](docs/Api/DeviceApi.md#removedevice) | **DELETE** /devices/{device_id} | Remove a device
 *GroupApi* | [**addParticipantToGroup**](docs/Api/GroupApi.md#addparticipanttogroup) | **POST** /group/participants | Adding more participants to group
 *GroupApi* | [**approveGroupParticipantRequest**](docs/Api/GroupApi.md#approvegroupparticipantrequest) | **POST** /group/participant-requests/approve | Approve participant request to join group
 *GroupApi* | [**createGroup**](docs/Api/GroupApi.md#creategroup) | **POST** /group | Create group and add participant
@@ -106,6 +126,7 @@ Class | Method | HTTP request | Description
 *GroupApi* | [**setGroupPhoto**](docs/Api/GroupApi.md#setgroupphoto) | **POST** /group/photo | Set group photo
 *GroupApi* | [**setGroupTopic**](docs/Api/GroupApi.md#setgrouptopic) | **POST** /group/topic | Set group topic
 *MessageApi* | [**deleteMessage**](docs/Api/MessageApi.md#deletemessage) | **POST** /message/{message_id}/delete | Delete Message
+*MessageApi* | [**downloadMessageMedia**](docs/Api/MessageApi.md#downloadmessagemedia) | **GET** /message/{message_id}/download | Download media from message
 *MessageApi* | [**reactMessage**](docs/Api/MessageApi.md#reactmessage) | **POST** /message/{message_id}/reaction | Send reaction to message
 *MessageApi* | [**readMessage**](docs/Api/MessageApi.md#readmessage) | **POST** /message/{message_id}/read | Mark as read message
 *MessageApi* | [**revokeMessage**](docs/Api/MessageApi.md#revokemessage) | **POST** /message/{message_id}/revoke | Revoke Message
@@ -138,7 +159,13 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [AddDeviceRequest](docs/Model/AddDeviceRequest.md)
+- [AppStatus200Response](docs/Model/AppStatus200Response.md)
+- [AppStatus200ResponseResults](docs/Model/AppStatus200ResponseResults.md)
 - [ApproveGroupParticipantRequestRequest](docs/Model/ApproveGroupParticipantRequestRequest.md)
+- [ArchiveChatRequest](docs/Model/ArchiveChatRequest.md)
+- [ArchiveChatResponse](docs/Model/ArchiveChatResponse.md)
+- [ArchiveChatResponseResults](docs/Model/ArchiveChatResponseResults.md)
 - [BusinessProfileResponse](docs/Model/BusinessProfileResponse.md)
 - [BusinessProfileResponseResults](docs/Model/BusinessProfileResponseResults.md)
 - [BusinessProfileResponseResultsBusinessHoursInner](docs/Model/BusinessProfileResponseResultsBusinessHoursInner.md)
@@ -151,11 +178,26 @@ Class | Method | HTTP request | Description
 - [ChatMessagesResponse](docs/Model/ChatMessagesResponse.md)
 - [ChatMessagesResponseResults](docs/Model/ChatMessagesResponseResults.md)
 - [ChatMessagesResponseResultsPagination](docs/Model/ChatMessagesResponseResultsPagination.md)
+- [ChatwootSyncHistory409Response](docs/Model/ChatwootSyncHistory409Response.md)
+- [ChatwootSyncHistory409ResponseResults](docs/Model/ChatwootSyncHistory409ResponseResults.md)
+- [ChatwootSyncHistoryRequest](docs/Model/ChatwootSyncHistoryRequest.md)
+- [ChatwootSyncResponse](docs/Model/ChatwootSyncResponse.md)
+- [ChatwootSyncResponseResults](docs/Model/ChatwootSyncResponseResults.md)
+- [ChatwootSyncStatusResponse](docs/Model/ChatwootSyncStatusResponse.md)
+- [ChatwootSyncStatusResponseResults](docs/Model/ChatwootSyncStatusResponseResults.md)
 - [CreateGroupRequest](docs/Model/CreateGroupRequest.md)
 - [CreateGroupResponse](docs/Model/CreateGroupResponse.md)
 - [CreateGroupResponseResults](docs/Model/CreateGroupResponseResults.md)
+- [DeviceAddResponse](docs/Model/DeviceAddResponse.md)
+- [DeviceInfo](docs/Model/DeviceInfo.md)
+- [DeviceInfoResponse](docs/Model/DeviceInfoResponse.md)
+- [DeviceListResponse](docs/Model/DeviceListResponse.md)
 - [DeviceResponse](docs/Model/DeviceResponse.md)
 - [DeviceResponseResultsInner](docs/Model/DeviceResponseResultsInner.md)
+- [DeviceStatusResponse](docs/Model/DeviceStatusResponse.md)
+- [DeviceStatusResponseResults](docs/Model/DeviceStatusResponseResults.md)
+- [DownloadMessageMedia200Response](docs/Model/DownloadMessageMedia200Response.md)
+- [DownloadMessageMedia200ResponseResults](docs/Model/DownloadMessageMedia200ResponseResults.md)
 - [ErrorBadRequest](docs/Model/ErrorBadRequest.md)
 - [ErrorInternalServer](docs/Model/ErrorInternalServer.md)
 - [ErrorNotFound](docs/Model/ErrorNotFound.md)
@@ -163,7 +205,6 @@ Class | Method | HTTP request | Description
 - [GenericResponse](docs/Model/GenericResponse.md)
 - [GetGroupInviteLinkResponse](docs/Model/GetGroupInviteLinkResponse.md)
 - [GetGroupInviteLinkResponseResults](docs/Model/GetGroupInviteLinkResponseResults.md)
-- [Group](docs/Model/Group.md)
 - [GroupInfoFromLinkResponse](docs/Model/GroupInfoFromLinkResponse.md)
 - [GroupInfoFromLinkResponseResults](docs/Model/GroupInfoFromLinkResponseResults.md)
 - [GroupInfoResponse](docs/Model/GroupInfoResponse.md)
@@ -173,8 +214,6 @@ Class | Method | HTTP request | Description
 - [GroupParticipantRequestListResponseResultsDataInner](docs/Model/GroupParticipantRequestListResponseResultsDataInner.md)
 - [GroupParticipantsResponse](docs/Model/GroupParticipantsResponse.md)
 - [GroupParticipantsResult](docs/Model/GroupParticipantsResult.md)
-- [GroupResponse](docs/Model/GroupResponse.md)
-- [GroupResponseResults](docs/Model/GroupResponseResults.md)
 - [JoinGroupWithLinkRequest](docs/Model/JoinGroupWithLinkRequest.md)
 - [LabelChatRequest](docs/Model/LabelChatRequest.md)
 - [LabelChatResponse](docs/Model/LabelChatResponse.md)
@@ -202,7 +241,6 @@ Class | Method | HTTP request | Description
 - [NewsletterThreadMetadataSettings](docs/Model/NewsletterThreadMetadataSettings.md)
 - [NewsletterThreadMetadataSettingsReactionCodes](docs/Model/NewsletterThreadMetadataSettingsReactionCodes.md)
 - [NewsletterViewerMetadata](docs/Model/NewsletterViewerMetadata.md)
-- [Participant](docs/Model/Participant.md)
 - [PinChatRequest](docs/Model/PinChatRequest.md)
 - [PinChatResponse](docs/Model/PinChatResponse.md)
 - [PinChatResponseResults](docs/Model/PinChatResponseResults.md)
@@ -219,6 +257,9 @@ Class | Method | HTTP request | Description
 - [SendPresenceRequest](docs/Model/SendPresenceRequest.md)
 - [SendResponse](docs/Model/SendResponse.md)
 - [SendResponseResults](docs/Model/SendResponseResults.md)
+- [SetDisappearingTimerRequest](docs/Model/SetDisappearingTimerRequest.md)
+- [SetDisappearingTimerResponse](docs/Model/SetDisappearingTimerResponse.md)
+- [SetDisappearingTimerResponseResults](docs/Model/SetDisappearingTimerResponseResults.md)
 - [SetGroupAnnounceRequest](docs/Model/SetGroupAnnounceRequest.md)
 - [SetGroupLockedRequest](docs/Model/SetGroupLockedRequest.md)
 - [SetGroupNameRequest](docs/Model/SetGroupNameRequest.md)
@@ -232,7 +273,6 @@ Class | Method | HTTP request | Description
 - [UserChangePushNameRequest](docs/Model/UserChangePushNameRequest.md)
 - [UserCheckResponse](docs/Model/UserCheckResponse.md)
 - [UserCheckResponseResults](docs/Model/UserCheckResponseResults.md)
-- [UserGroupInfoResponse](docs/Model/UserGroupInfoResponse.md)
 - [UserGroupResponse](docs/Model/UserGroupResponse.md)
 - [UserGroupResponseResults](docs/Model/UserGroupResponseResults.md)
 - [UserGroupResponseResultsDataInner](docs/Model/UserGroupResponseResultsDataInner.md)
@@ -267,6 +307,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `6.12.0`
-    - Generator version: `7.18.0-SNAPSHOT`
+- API version: `8.3.0`
+    - Generator version: `7.22.0-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

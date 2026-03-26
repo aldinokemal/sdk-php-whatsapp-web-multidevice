@@ -1,4 +1,4 @@
-# # NewsletterThreadMetadataPicture
+# NewsletterThreadMetadataPicture
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # SendResponse
+# SendResponse
 
 ## Properties
 

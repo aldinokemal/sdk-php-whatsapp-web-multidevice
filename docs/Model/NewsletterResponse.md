@@ -1,4 +1,4 @@
-# # NewsletterResponse
+# NewsletterResponse
 
 ## Properties
 

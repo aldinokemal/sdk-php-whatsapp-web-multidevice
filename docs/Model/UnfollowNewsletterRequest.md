@@ -1,4 +1,4 @@
-# # UnfollowNewsletterRequest
+# UnfollowNewsletterRequest
 
 ## Properties
 

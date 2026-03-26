@@ -1,4 +1,4 @@
-# # DeviceResponseResultsInner
+# DeviceResponseResultsInner
 
 ## Properties
 

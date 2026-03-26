@@ -1,4 +1,4 @@
-# # BusinessProfileResponseResultsCategoriesInner
+# BusinessProfileResponseResultsCategoriesInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # SendPresenceRequest
+# SendPresenceRequest
 
 ## Properties
 

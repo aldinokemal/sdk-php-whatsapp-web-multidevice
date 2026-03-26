@@ -31,7 +31,7 @@ All URIs are relative to http://localhost:3000, except if the operation defines 
 ## `addParticipantToGroup()`
 
 ```php
-addParticipantToGroup($manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
+addParticipantToGroup($x_device_id, $manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
 ```
 
 Adding more participants to group
@@ -55,10 +55,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
 try {
-    $result = $apiInstance->addParticipantToGroup($manage_participant_request);
+    $result = $apiInstance->addParticipantToGroup($x_device_id, $manage_participant_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->addParticipantToGroup: ', $e->getMessage(), PHP_EOL;
@@ -69,6 +70,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **manage_participant_request** | [**\SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
 
 ### Return type
@@ -91,7 +93,7 @@ try {
 ## `approveGroupParticipantRequest()`
 
 ```php
-approveGroupParticipantRequest($approve_group_participant_request_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+approveGroupParticipantRequest($x_device_id, $approve_group_participant_request_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Approve participant request to join group
@@ -115,10 +117,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $approve_group_participant_request_request = new \SdkWhatsappWebMultiDevice\Model\ApproveGroupParticipantRequestRequest(); // \SdkWhatsappWebMultiDevice\Model\ApproveGroupParticipantRequestRequest
 
 try {
-    $result = $apiInstance->approveGroupParticipantRequest($approve_group_participant_request_request);
+    $result = $apiInstance->approveGroupParticipantRequest($x_device_id, $approve_group_participant_request_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->approveGroupParticipantRequest: ', $e->getMessage(), PHP_EOL;
@@ -129,6 +132,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **approve_group_participant_request_request** | [**\SdkWhatsappWebMultiDevice\Model\ApproveGroupParticipantRequestRequest**](../Model/ApproveGroupParticipantRequestRequest.md)|  | [optional] |
 
 ### Return type
@@ -151,7 +155,7 @@ try {
 ## `createGroup()`
 
 ```php
-createGroup($create_group_request): \SdkWhatsappWebMultiDevice\Model\CreateGroupResponse
+createGroup($x_device_id, $create_group_request): \SdkWhatsappWebMultiDevice\Model\CreateGroupResponse
 ```
 
 Create group and add participant
@@ -175,10 +179,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $create_group_request = new \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest(); // \SdkWhatsappWebMultiDevice\Model\CreateGroupRequest
 
 try {
-    $result = $apiInstance->createGroup($create_group_request);
+    $result = $apiInstance->createGroup($x_device_id, $create_group_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->createGroup: ', $e->getMessage(), PHP_EOL;
@@ -189,6 +194,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **create_group_request** | [**\SdkWhatsappWebMultiDevice\Model\CreateGroupRequest**](../Model/CreateGroupRequest.md)|  | [optional] |
 
 ### Return type
@@ -211,7 +217,7 @@ try {
 ## `demoteParticipantToMember()`
 
 ```php
-demoteParticipantToMember($manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
+demoteParticipantToMember($x_device_id, $manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
 ```
 
 Demote participants to member
@@ -235,10 +241,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
 try {
-    $result = $apiInstance->demoteParticipantToMember($manage_participant_request);
+    $result = $apiInstance->demoteParticipantToMember($x_device_id, $manage_participant_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->demoteParticipantToMember: ', $e->getMessage(), PHP_EOL;
@@ -249,6 +256,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **manage_participant_request** | [**\SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
 
 ### Return type
@@ -271,7 +279,7 @@ try {
 ## `exportGroupParticipants()`
 
 ```php
-exportGroupParticipants($group_id): \SplFileObject
+exportGroupParticipants($group_id, $x_device_id): \SplFileObject
 ```
 
 Export group participants as CSV
@@ -296,9 +304,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     $config
 );
 $group_id = 120363024512399999@g.us; // string | The group ID to export participants for
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->exportGroupParticipants($group_id);
+    $result = $apiInstance->exportGroupParticipants($group_id, $x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->exportGroupParticipants: ', $e->getMessage(), PHP_EOL;
@@ -310,6 +319,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **string**| The group ID to export participants for | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -331,7 +341,7 @@ try {
 ## `getGroupInfoFromLink()`
 
 ```php
-getGroupInfoFromLink($link): \SdkWhatsappWebMultiDevice\Model\GroupInfoFromLinkResponse
+getGroupInfoFromLink($link, $x_device_id): \SdkWhatsappWebMultiDevice\Model\GroupInfoFromLinkResponse
 ```
 
 Get group information from invitation link
@@ -358,9 +368,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     $config
 );
 $link = https://chat.whatsapp.com/whatsappKeyJoinGroup; // string | WhatsApp group invitation link
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->getGroupInfoFromLink($link);
+    $result = $apiInstance->getGroupInfoFromLink($link, $x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getGroupInfoFromLink: ', $e->getMessage(), PHP_EOL;
@@ -372,6 +383,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **link** | **string**| WhatsApp group invitation link | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -393,7 +405,7 @@ try {
 ## `getGroupParticipantRequests()`
 
 ```php
-getGroupParticipantRequests($group_id): \SdkWhatsappWebMultiDevice\Model\GroupParticipantRequestListResponse
+getGroupParticipantRequests($group_id, $x_device_id): \SdkWhatsappWebMultiDevice\Model\GroupParticipantRequestListResponse
 ```
 
 Get list of participant requests to join group
@@ -418,9 +430,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     $config
 );
 $group_id = 120363024512399999@g.us; // string | The group ID to get participant requests for
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->getGroupParticipantRequests($group_id);
+    $result = $apiInstance->getGroupParticipantRequests($group_id, $x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getGroupParticipantRequests: ', $e->getMessage(), PHP_EOL;
@@ -432,6 +445,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **string**| The group ID to get participant requests for | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -453,7 +467,7 @@ try {
 ## `getGroupParticipants()`
 
 ```php
-getGroupParticipants($group_id): \SdkWhatsappWebMultiDevice\Model\GroupParticipantsResponse
+getGroupParticipants($group_id, $x_device_id): \SdkWhatsappWebMultiDevice\Model\GroupParticipantsResponse
 ```
 
 Get list of participants in a group
@@ -478,9 +492,10 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     $config
 );
 $group_id = 120363024512399999@g.us; // string | The group ID to fetch participants for
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 
 try {
-    $result = $apiInstance->getGroupParticipants($group_id);
+    $result = $apiInstance->getGroupParticipants($group_id, $x_device_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->getGroupParticipants: ', $e->getMessage(), PHP_EOL;
@@ -492,6 +507,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **string**| The group ID to fetch participants for | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 
 ### Return type
 
@@ -513,7 +529,7 @@ try {
 ## `groupInfo()`
 
 ```php
-groupInfo($group_id): \SdkWhatsappWebMultiDevice\Model\GroupInfoResponse
+groupInfo($x_device_id, $group_id): \SdkWhatsappWebMultiDevice\Model\GroupInfoResponse
 ```
 
 Group Info
@@ -537,10 +553,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $group_id = 120363025982934543@g.us; // string | WhatsApp Group ID
 
 try {
-    $result = $apiInstance->groupInfo($group_id);
+    $result = $apiInstance->groupInfo($x_device_id, $group_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->groupInfo: ', $e->getMessage(), PHP_EOL;
@@ -551,6 +568,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **group_id** | **string**| WhatsApp Group ID | [optional] |
 
 ### Return type
@@ -573,7 +591,7 @@ try {
 ## `groupInviteLink()`
 
 ```php
-groupInviteLink($group_id, $reset): \SdkWhatsappWebMultiDevice\Model\GetGroupInviteLinkResponse
+groupInviteLink($group_id, $x_device_id, $reset): \SdkWhatsappWebMultiDevice\Model\GetGroupInviteLinkResponse
 ```
 
 Group Invite Link
@@ -598,10 +616,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     $config
 );
 $group_id = 'group_id_example'; // string | WhatsApp Group ID
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $reset = false; // bool | Reset existing invite link
 
 try {
-    $result = $apiInstance->groupInviteLink($group_id, $reset);
+    $result = $apiInstance->groupInviteLink($group_id, $x_device_id, $reset);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->groupInviteLink: ', $e->getMessage(), PHP_EOL;
@@ -613,6 +632,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **string**| WhatsApp Group ID | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **reset** | **bool**| Reset existing invite link | [optional] [default to false] |
 
 ### Return type
@@ -635,7 +655,7 @@ try {
 ## `joinGroupWithLink()`
 
 ```php
-joinGroupWithLink($join_group_with_link_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+joinGroupWithLink($x_device_id, $join_group_with_link_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Join group with link
@@ -659,10 +679,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $join_group_with_link_request = new \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest(); // \SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest
 
 try {
-    $result = $apiInstance->joinGroupWithLink($join_group_with_link_request);
+    $result = $apiInstance->joinGroupWithLink($x_device_id, $join_group_with_link_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->joinGroupWithLink: ', $e->getMessage(), PHP_EOL;
@@ -673,6 +694,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **join_group_with_link_request** | [**\SdkWhatsappWebMultiDevice\Model\JoinGroupWithLinkRequest**](../Model/JoinGroupWithLinkRequest.md)|  | [optional] |
 
 ### Return type
@@ -695,7 +717,7 @@ try {
 ## `leaveGroup()`
 
 ```php
-leaveGroup($leave_group_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+leaveGroup($x_device_id, $leave_group_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Leave group
@@ -719,10 +741,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $leave_group_request = new \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest(); // \SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest
 
 try {
-    $result = $apiInstance->leaveGroup($leave_group_request);
+    $result = $apiInstance->leaveGroup($x_device_id, $leave_group_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->leaveGroup: ', $e->getMessage(), PHP_EOL;
@@ -733,6 +756,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **leave_group_request** | [**\SdkWhatsappWebMultiDevice\Model\LeaveGroupRequest**](../Model/LeaveGroupRequest.md)|  | [optional] |
 
 ### Return type
@@ -755,7 +779,7 @@ try {
 ## `promoteParticipantToAdmin()`
 
 ```php
-promoteParticipantToAdmin($manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
+promoteParticipantToAdmin($x_device_id, $manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
 ```
 
 Promote participants to admin
@@ -779,10 +803,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
 try {
-    $result = $apiInstance->promoteParticipantToAdmin($manage_participant_request);
+    $result = $apiInstance->promoteParticipantToAdmin($x_device_id, $manage_participant_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->promoteParticipantToAdmin: ', $e->getMessage(), PHP_EOL;
@@ -793,6 +818,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **manage_participant_request** | [**\SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
 
 ### Return type
@@ -815,7 +841,7 @@ try {
 ## `rejectGroupParticipantRequest()`
 
 ```php
-rejectGroupParticipantRequest($reject_group_participant_request_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+rejectGroupParticipantRequest($x_device_id, $reject_group_participant_request_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Reject participant request to join group
@@ -839,10 +865,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $reject_group_participant_request_request = new \SdkWhatsappWebMultiDevice\Model\RejectGroupParticipantRequestRequest(); // \SdkWhatsappWebMultiDevice\Model\RejectGroupParticipantRequestRequest
 
 try {
-    $result = $apiInstance->rejectGroupParticipantRequest($reject_group_participant_request_request);
+    $result = $apiInstance->rejectGroupParticipantRequest($x_device_id, $reject_group_participant_request_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->rejectGroupParticipantRequest: ', $e->getMessage(), PHP_EOL;
@@ -853,6 +880,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **reject_group_participant_request_request** | [**\SdkWhatsappWebMultiDevice\Model\RejectGroupParticipantRequestRequest**](../Model/RejectGroupParticipantRequestRequest.md)|  | [optional] |
 
 ### Return type
@@ -875,7 +903,7 @@ try {
 ## `removeParticipantFromGroup()`
 
 ```php
-removeParticipantFromGroup($manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
+removeParticipantFromGroup($x_device_id, $manage_participant_request): \SdkWhatsappWebMultiDevice\Model\ManageParticipantResponse
 ```
 
 Remove participants from group
@@ -899,10 +927,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $manage_participant_request = new \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest(); // \SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest
 
 try {
-    $result = $apiInstance->removeParticipantFromGroup($manage_participant_request);
+    $result = $apiInstance->removeParticipantFromGroup($x_device_id, $manage_participant_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->removeParticipantFromGroup: ', $e->getMessage(), PHP_EOL;
@@ -913,6 +942,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **manage_participant_request** | [**\SdkWhatsappWebMultiDevice\Model\ManageParticipantRequest**](../Model/ManageParticipantRequest.md)|  | [optional] |
 
 ### Return type
@@ -935,7 +965,7 @@ try {
 ## `setGroupAnnounce()`
 
 ```php
-setGroupAnnounce($set_group_announce_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+setGroupAnnounce($x_device_id, $set_group_announce_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Set group announce mode
@@ -961,10 +991,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $set_group_announce_request = new \SdkWhatsappWebMultiDevice\Model\SetGroupAnnounceRequest(); // \SdkWhatsappWebMultiDevice\Model\SetGroupAnnounceRequest
 
 try {
-    $result = $apiInstance->setGroupAnnounce($set_group_announce_request);
+    $result = $apiInstance->setGroupAnnounce($x_device_id, $set_group_announce_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->setGroupAnnounce: ', $e->getMessage(), PHP_EOL;
@@ -975,6 +1006,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **set_group_announce_request** | [**\SdkWhatsappWebMultiDevice\Model\SetGroupAnnounceRequest**](../Model/SetGroupAnnounceRequest.md)|  | [optional] |
 
 ### Return type
@@ -997,7 +1029,7 @@ try {
 ## `setGroupLocked()`
 
 ```php
-setGroupLocked($set_group_locked_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+setGroupLocked($x_device_id, $set_group_locked_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Set group locked status
@@ -1023,10 +1055,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $set_group_locked_request = new \SdkWhatsappWebMultiDevice\Model\SetGroupLockedRequest(); // \SdkWhatsappWebMultiDevice\Model\SetGroupLockedRequest
 
 try {
-    $result = $apiInstance->setGroupLocked($set_group_locked_request);
+    $result = $apiInstance->setGroupLocked($x_device_id, $set_group_locked_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->setGroupLocked: ', $e->getMessage(), PHP_EOL;
@@ -1037,6 +1070,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **set_group_locked_request** | [**\SdkWhatsappWebMultiDevice\Model\SetGroupLockedRequest**](../Model/SetGroupLockedRequest.md)|  | [optional] |
 
 ### Return type
@@ -1059,7 +1093,7 @@ try {
 ## `setGroupName()`
 
 ```php
-setGroupName($set_group_name_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+setGroupName($x_device_id, $set_group_name_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Set group name
@@ -1083,10 +1117,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $set_group_name_request = new \SdkWhatsappWebMultiDevice\Model\SetGroupNameRequest(); // \SdkWhatsappWebMultiDevice\Model\SetGroupNameRequest
 
 try {
-    $result = $apiInstance->setGroupName($set_group_name_request);
+    $result = $apiInstance->setGroupName($x_device_id, $set_group_name_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->setGroupName: ', $e->getMessage(), PHP_EOL;
@@ -1097,6 +1132,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **set_group_name_request** | [**\SdkWhatsappWebMultiDevice\Model\SetGroupNameRequest**](../Model/SetGroupNameRequest.md)|  | [optional] |
 
 ### Return type
@@ -1119,7 +1155,7 @@ try {
 ## `setGroupPhoto()`
 
 ```php
-setGroupPhoto($group_id, $photo): \SdkWhatsappWebMultiDevice\Model\SetGroupPhotoResponse
+setGroupPhoto($group_id, $x_device_id, $photo): \SdkWhatsappWebMultiDevice\Model\SetGroupPhotoResponse
 ```
 
 Set group photo
@@ -1144,10 +1180,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     $config
 );
 $group_id = 'group_id_example'; // string | The group ID
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $photo = '/path/to/file.txt'; // \SplFileObject | Group photo to upload (JPEG format recommended). Leave empty to remove photo.
 
 try {
-    $result = $apiInstance->setGroupPhoto($group_id, $photo);
+    $result = $apiInstance->setGroupPhoto($group_id, $x_device_id, $photo);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->setGroupPhoto: ', $e->getMessage(), PHP_EOL;
@@ -1159,6 +1196,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **string**| The group ID | |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **photo** | **\SplFileObject****\SplFileObject**| Group photo to upload (JPEG format recommended). Leave empty to remove photo. | [optional] |
 
 ### Return type
@@ -1181,7 +1219,7 @@ try {
 ## `setGroupTopic()`
 
 ```php
-setGroupTopic($set_group_topic_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
+setGroupTopic($x_device_id, $set_group_topic_request): \SdkWhatsappWebMultiDevice\Model\GenericResponse
 ```
 
 Set group topic
@@ -1207,10 +1245,11 @@ $apiInstance = new SdkWhatsappWebMultiDevice\Api\GroupApi(
     new GuzzleHttp\Client(),
     $config
 );
+$x_device_id = my-device-id; // string | Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as `device_id` query parameter.
 $set_group_topic_request = new \SdkWhatsappWebMultiDevice\Model\SetGroupTopicRequest(); // \SdkWhatsappWebMultiDevice\Model\SetGroupTopicRequest
 
 try {
-    $result = $apiInstance->setGroupTopic($set_group_topic_request);
+    $result = $apiInstance->setGroupTopic($x_device_id, $set_group_topic_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupApi->setGroupTopic: ', $e->getMessage(), PHP_EOL;
@@ -1221,6 +1260,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **x_device_id** | **string**| Device identifier for multi-device support. Required when multiple devices are registered. If only one device is registered, it will be used as the default. Can also be provided as &#x60;device_id&#x60; query parameter. | [optional] |
 | **set_group_topic_request** | [**\SdkWhatsappWebMultiDevice\Model\SetGroupTopicRequest**](../Model/SetGroupTopicRequest.md)|  | [optional] |
 
 ### Return type

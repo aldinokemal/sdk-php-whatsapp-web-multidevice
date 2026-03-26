@@ -1,6 +1,6 @@
 {
     "name": "aldinokemal/sdk-php-whatsapp-web-multidevice",
-    "description": "This API is used for sending whatsapp via API",
+    "description": "This API is used for sending whatsapp via API.  Device scoping: - Send `X-Device-Id` on all device-scoped REST calls. - WebSocket: connect to `/ws?device_id=<id>`.",
     "keywords": [
         "openapitools",
         "openapi-generator",

@@ -1,4 +1,4 @@
-# # NewsletterThreadMetadataSettingsReactionCodes
+# NewsletterThreadMetadataSettingsReactionCodes
 
 ## Properties
 

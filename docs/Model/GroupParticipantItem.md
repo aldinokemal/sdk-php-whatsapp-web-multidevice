@@ -1,4 +1,4 @@
-# # GroupParticipantItem
+# GroupParticipantItem
 
 ## Properties
 

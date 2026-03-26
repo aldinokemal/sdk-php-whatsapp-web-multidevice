@@ -1,4 +1,4 @@
-# # GenericResponse
+# GenericResponse
 
 ## Properties
 

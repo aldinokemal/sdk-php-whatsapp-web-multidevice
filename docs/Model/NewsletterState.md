@@ -1,4 +1,4 @@
-# # NewsletterState
+# NewsletterState
 
 ## Properties
 

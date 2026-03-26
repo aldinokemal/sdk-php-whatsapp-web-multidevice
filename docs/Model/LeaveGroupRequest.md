@@ -1,4 +1,4 @@
-# # LeaveGroupRequest
+# LeaveGroupRequest
 
 ## Properties
 

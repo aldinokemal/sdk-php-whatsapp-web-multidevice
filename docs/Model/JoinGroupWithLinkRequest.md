@@ -1,4 +1,4 @@
-# # JoinGroupWithLinkRequest
+# JoinGroupWithLinkRequest
 
 ## Properties
 

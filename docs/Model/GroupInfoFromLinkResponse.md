@@ -1,4 +1,4 @@
-# # GroupInfoFromLinkResponse
+# GroupInfoFromLinkResponse
 
 ## Properties
 

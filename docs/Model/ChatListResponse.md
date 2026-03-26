@@ -1,4 +1,4 @@
-# # ChatListResponse
+# ChatListResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # PinChatResponse
+# PinChatResponse
 
 ## Properties
 

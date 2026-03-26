@@ -1,4 +1,4 @@
-# # UserChangePushNameRequest
+# UserChangePushNameRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # MyListContacts
+# MyListContacts
 
 ## Properties
 

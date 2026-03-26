@@ -1,4 +1,4 @@
-# # CreateGroupResponseResults
+# CreateGroupResponseResults
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # GetGroupInviteLinkResponseResults
+# GetGroupInviteLinkResponseResults
 
 ## Properties
 

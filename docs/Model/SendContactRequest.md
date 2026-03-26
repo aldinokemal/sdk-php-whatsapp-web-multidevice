@@ -1,4 +1,4 @@
-# # SendContactRequest
+# SendContactRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # SendLinkRequest
+# SendLinkRequest
 
 ## Properties
 

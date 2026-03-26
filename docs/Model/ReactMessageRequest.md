@@ -1,4 +1,4 @@
-# # ReactMessageRequest
+# ReactMessageRequest
 
 ## Properties
 

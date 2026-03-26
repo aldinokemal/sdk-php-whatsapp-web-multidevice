@@ -1,4 +1,4 @@
-# # NewsletterThreadMetadata
+# NewsletterThreadMetadata
 
 ## Properties
 

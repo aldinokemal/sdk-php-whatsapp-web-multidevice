@@ -1,4 +1,4 @@
-# # CreateGroupRequest
+# CreateGroupRequest
 
 ## Properties
 
